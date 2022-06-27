@@ -16,7 +16,7 @@
       		type="javax.sql.DataSource"
       		driverClassName="oracle.jdbc.driver.OracleDriver"
       		factory="org.apache.commons.dbcp.BasicDataSourceFactory"
-      		url="jdbc:oracle:thin:@icteducarproject_medium?TNS_ADMIN=/Users/hyeoncheolseo/Downloads/Wallet_icteducarproject"
+      		url="jdbc:oracle:thin:@114.207.167.89:1522:xe"
       		username="ADMIN" password="Icteducarproject1" 
       		maxActive="20" maxIdle="10" maxWait="1"/>
       		
