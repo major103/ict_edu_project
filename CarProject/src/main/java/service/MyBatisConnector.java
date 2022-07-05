@@ -10,9 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisConnector {
     
-	//interface(사용설명서)
 	SqlSessionFactory  factory=null;
-	
 	private static MyBatisConnector connector; 
 	
 	public MyBatisConnector()
@@ -20,7 +18,7 @@ public class MyBatisConnector {
 		try {
 			//sqlMapConfig.xml읽어들인다.
 			Reader reader = 
-			Resources.getResourceAsReader("config/mybatis/sqlMapConfig.xml");
+				Resources.getResourceAsReader("config/mybatis/sqlMapConfig.xml");
 			factory = new SqlSessionFactoryBuilder().build(reader);
 			reader.close();
 		} catch (IOException e) {
