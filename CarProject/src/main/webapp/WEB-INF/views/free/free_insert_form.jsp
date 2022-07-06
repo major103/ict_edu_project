@@ -32,7 +32,7 @@
 			return;
 		}
 		
-		f.action = "insert.do"
+		f.action = "free/insert.do"
 		f.submit();
 	}
 
