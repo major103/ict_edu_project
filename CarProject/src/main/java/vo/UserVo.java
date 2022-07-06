@@ -96,6 +96,4 @@ public class UserVo {
 		this.last_log = last_log;
 	}
 	
-	
-	
 }
