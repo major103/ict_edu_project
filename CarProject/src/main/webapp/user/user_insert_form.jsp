@@ -28,7 +28,7 @@
 				$("#btn_register").attr("disabled",true);
 				return;
 			}
-			
+ 			
 			if(regular_phone.test(u_phone)==false){
 				$("#phone_msg").html("번호가 이상합니다").css("color","red");
 				$("#btn_register").attr("disabled", true);
@@ -36,7 +36,7 @@
 			}
 			
 			if(regular_email.test(u_email)==false){
-				$("#email_msg").html("이메일 형식에 맞게 입력해라").css("color","red");
+				$("#email_msg").html("이메일 형식에 맞게 입력하세요").css("color","red");
 				$("#btn_register").attr("disabled", true);
 				return;
 			}
@@ -122,7 +122,10 @@
       				
       				<tr>
       					<th>성별</th>
-      					<td><input type="radio" value="남자" value="여자"></td>
+      					<td>
+      						<input type="radio" name="gender" value="남자">남자 
+      						<input type="radio" name="gender" value="여자">여자
+      					</td>
       				</tr>
       				
       				<tr>
@@ -132,16 +135,18 @@
       				
       				<tr>
       					<th>전화번호</th>
+      					<td><input name="u_phone"></td>
       				</tr>
       				
       				<tr>
       					<th>이메일</th>
+      					<td><input name="u_email"></td>
       				</tr>
       				
       				
       				<tr>
       					<td colspan="2" align="center">
-      						<input class="btn btn-primary" type="button" value="가입하기" id="btn_register" disabled="disabled"
+      						<input class="btn btn-primary" type="button" value="가입하기" id="btn_register"
       							   onclick="send(this.form);">
       						<input class="btn btn-success" type="button" value="목록보기"
       							   onclick="location.href='list.do'">
