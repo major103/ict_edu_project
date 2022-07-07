@@ -28,7 +28,7 @@
 			return;
 		}
 		
-		f.action = "modify.do"
+		f.action = "free/modify.do"
 		f.submit();
 	}
 
