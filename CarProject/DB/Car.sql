@@ -1,6 +1,7 @@
 /*
 --자동차 정보
 
+select * from user_info
 
 --일련번호
 create sequence seq_car_car_idx
@@ -16,7 +17,7 @@ create table car_info(
 	car_price		varchar2(255),				--차량가격
 	car_fuel		varchar2(255),				--차량연료
 	car_type		varchar2(255),				--차량종류
-	car_f_cost		int,						--차량연비
+	car_fcost		int,						--차량연비
 	car_output		varchar2(255),				--차량출력
 	car_torq		varchar2(255),				--차량토크
 	car_exhaust		varchar2(255),				--차량배기

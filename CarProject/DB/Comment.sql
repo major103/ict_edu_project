@@ -7,7 +7,7 @@
 create sequence seq_withdraw_com_idx
 
 --테이블
-create table comment(
+create table com_ment(
 
 	com_idx			int,
 	com_writer		varchar2(100)		not null,	--댓글 작성자
@@ -18,11 +18,13 @@ create table comment(
 )
  
 --pk
-alter table comment
+alter table com_ment
 	add constraint pk_comment_idx primary key(com_idx);
  
+ 
+ --아직안함
 --fk
-alter table comment
+alter table com_ment
 	add constraint fk_comment_free_idx foreign key(free_idx)
 	references free(free_index)
  
