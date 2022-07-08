@@ -1,4 +1,4 @@
-package action.grade;
+package action.user;
 
 import java.io.IOException;
 
@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class GradeInsertAction
+ * Servlet implementation class UserInsertFormAction
  */
-@WebServlet("/grade/insert.do")
-public class GradeInsertAction extends HttpServlet {
+@WebServlet("/user/insert_form.do")
+public class UserInsertFormAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -23,6 +23,10 @@ public class GradeInsertAction extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+		//forward
+		String forward_page = "user_insert_form.jsp";
+		RequestDispatcher disp = request.getRequestDispatcher(forward_page);
+		disp.forward(request, response);
 	}
 
 }
