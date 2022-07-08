@@ -1,7 +1,7 @@
 /*
 --자동차 정보
 
-select * from user_info
+select * from car_info
 
 --일련번호
 create sequence seq_car_car_idx
@@ -36,7 +36,27 @@ alter table car_info
 alter table car_info
 	add constraint unique_car_info_name unique(car_name);
 	
-
+--sample data
+insert into car_info
+	values(seq_car_car_idx.nextVal,
+			'911-Carrera',
+			'coupe',
+			'porsche',
+			'158,700,000',
+			'휘발유',
+			'RR',
+			null,
+			'392/6500',
+			'45.9/1950-5000',
+			'2981cc',
+			'수형대향 6기통 트윈터보',
+			null,
+			'DCT 8단',
+			null
+			)
+			
+			
+			
  
  
  
