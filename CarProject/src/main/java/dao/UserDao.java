@@ -1,30 +1,28 @@
 package dao;
 
-import java.util.List;
+import vo.UserVo;
 
-import vo.GradeVo;
-
-public class GradeDao {
+public class UserDao {
 
 	//single-ton : 객체 1개만 생성해서 사용하자
-	static GradeDao single = null;
+	static UserDao single = null;
 
-	public static GradeDao getInstance() {
+	public static UserDao getInstance() {
 
 		//객체가 없으면 생성해라
 		if (single == null)
-			single = new GradeDao();
+			single = new UserDao();
 
 		return single;
 	}
 
 	//외부에서 생성하지 말것
-	private GradeDao() {
+	private UserDao() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public List<GradeVo> selectList() {
+	public int insert(UserVo vo) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 }

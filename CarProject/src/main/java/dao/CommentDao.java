@@ -2,28 +2,28 @@ package dao;
 
 import java.util.List;
 
-import vo.DiscussVo;
+import vo.CommentVo;
 
-public class DiscussDao {
+public class CommentDao {
 
 	//single-ton : 객체 1개만 생성해서 사용하자
-	static DiscussDao single = null;
+	static CommentDao single = null;
 
-	public static DiscussDao getInstance() {
+	public static CommentDao getInstance() {
 
 		//객체가 없으면 생성해라
 		if (single == null)
-			single = new DiscussDao();
+			single = new CommentDao();
 
 		return single;
 	}
 
 	//외부에서 생성하지 말것
-	private DiscussDao() {
+	private CommentDao() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public List<DiscussVo> selectList() {
+	public List<CommentVo> selectList() {
 		// TODO Auto-generated method stub
 		return null;
 	}

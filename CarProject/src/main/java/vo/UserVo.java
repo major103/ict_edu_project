@@ -16,7 +16,18 @@ public class UserVo {
 	String joindate;
 	String last_log;
 	
-	
+	public UserVo(String u_id, String u_pwd, String u_name, String u_gender, String u_birth, String u_phone,
+			String u_email, String u_ip) {
+		super();
+		this.u_id = u_id;
+		this.u_pwd = u_pwd;
+		this.u_name = u_name;
+		this.u_gender = u_gender;
+		this.u_birth = u_birth;
+		this.u_phone = u_phone;
+		this.u_email = u_email;
+		this.u_ip = u_ip;
+	}
 	public String getU_name() {
 		return u_name;
 	}

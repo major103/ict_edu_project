@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: hyeoncheolseo
+=======
+Built-By: ict04-17
+>>>>>>> a5482a711cdcb09be79cc2b7cafc19b7a7646415
 Build-Jdk: 15.0.2
 Created-By: Maven Integration for Eclipse
 
