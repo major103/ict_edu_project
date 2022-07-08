@@ -1,6 +1,7 @@
 /*
 --자동차 정보
 
+select * from car_info
 
 --일련번호
 create sequence seq_car_car_idx
@@ -16,7 +17,7 @@ create table car_info(
 	car_price		varchar2(255),				--차량가격
 	car_fuel		varchar2(255),				--차량연료
 	car_type		varchar2(255),				--차량종류
-	car_f_cost		int,						--차량연비
+	car_fcost		int,						--차량연비
 	car_output		varchar2(255),				--차량출력
 	car_torq		varchar2(255),				--차량토크
 	car_exhaust		varchar2(255),				--차량배기
@@ -35,7 +36,27 @@ alter table car_info
 alter table car_info
 	add constraint unique_car_info_name unique(car_name);
 	
-
+--sample data
+insert into car_info
+	values(seq_car_car_idx.nextVal,
+			'911-Carrera',
+			'coupe',
+			'porsche',
+			'158,700,000',
+			'휘발유',
+			'RR',
+			null,
+			'392/6500',
+			'45.9/1950-5000',
+			'2981cc',
+			'수형대향 6기통 트윈터보',
+			null,
+			'DCT 8단',
+			null
+			)
+			
+			
+			
  
  
  

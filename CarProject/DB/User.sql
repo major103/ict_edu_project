@@ -40,9 +40,24 @@
  				'1994/07/29',
  				'010-4057-2432',
  				'dusgod30@gmail.com',
+ 				'192.168.0.1',
  				'n',
  				sysdate,
  				'y',
+ 				sysdate);
+ 	
+ 	insert into user_info
+ 		values(seq_user_u_idx.nextVal,
+ 				'guest',
+ 				'1234',
+ 				'여',
+ 				'1996/09/12',
+ 				'010-2162-6666',
+ 				'asdf123@gmail.com',
+ 				'192.168.0.1',
+ 				'n',
+ 				sysdate,
+ 				'n',
  				sysdate);
  				
  				
@@ -50,11 +65,13 @@
  	--조회
  	select * from user_info
  	
+ 	drop table user_info
+ 	
  	
  
  
  
- 
+ 	select * from user
  
  
  

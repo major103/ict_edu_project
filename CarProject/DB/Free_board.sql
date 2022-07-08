@@ -25,8 +25,8 @@ alter table free
 
 --fk
 alter table free
-	add constraint fk_free_user_id foreign key(user_id)
-	references user_info(user_id);
+	add constraint fk_free_user_id foreign key(u_id)
+	references user_info(u_id);
  
  
  

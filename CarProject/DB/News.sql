@@ -2,11 +2,10 @@
 
 --뉴스
 
-
-create table withdraw(
+select * from news
 
 --일련번호 관리객체	
-create sequence seq_photo_p_idx
+create sequence seq_news_n_idx
 	
 --table
 create table news(

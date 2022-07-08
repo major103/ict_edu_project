@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,21 +49,31 @@
 		<header>
 			<div class="top">
 				<ul>
-					<li><a href="/sub/login.html"><span>로그인</span></a></li>
-					<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
-						<div class="pc_toplink_menu" style="display: none;">
-							<p>
-								<a href="http://imagazinekorea.com/etc/online_ad.asp"
-									target="_blank">북마크</a>
-							</p>
-							<p>
-								<a href="http://imagazinekorea.com/etc/notice.asp"
-									target="_blank">개인정보</a>
-							</p>
-							<p>
-								<a href="http://www.kayamedia.com/" target="_blank">QnA</a>
-							</p>
-						</div></li>
+					<!-- 로그인이 안된경우 -->
+					<c:if test="${ empty sessionScope.user }">
+						<li><a href="/sub/login.html"><!-- 로그인액션 --><span>로그인</span></a></li>
+						<li class="top_menu"><a href="#"><!-- 로그인 후 이용할수있습니다 컨펌 --><strong>마이페이지</strong></a>
+					</c:if>
+					<!-- 로그인이 된경우 -->
+					<c:if test="${ not empty user }">
+						<li><!-- 로그아웃 앵커태그 적용 --><a href="#"><span>로그아웃</span></a></li>
+						<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
+							<div class="pc_toplink_menu" style="display: none;">
+								<p>
+									<a href="http://imagazinekorea.com/etc/online_ad.asp"
+										target="_blank">북마크</a>
+								</p>
+								<p>
+									<a href="http://imagazinekorea.com/etc/notice.asp"
+										target="_blank">개인정보</a>
+								</p>
+								<p>
+									<a href="http://www.kayamedia.com/" target="_blank">QnA</a>
+								</p>
+							</div>
+						</li>
+					</c:if>
+			
 				
 					<li>
 						<div class="search">
