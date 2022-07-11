@@ -23,8 +23,8 @@
 			<th>입장</th>
 		</tr>
 		<tr>
-			<td>${ d_idx }</td>
-			<td>${ d_title }</td>
+			<td>${ c_index }</td>
+			<td>${ c_title }</td>
 			<td><input type="button" value="입장"></td>
 		</tr>
 	</table>

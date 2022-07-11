@@ -1,4 +1,4 @@
-package action.discuss;
+package action.chatting;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.DiscussDao;
-import vo.DiscussVo;
+import dao.ChattingDao;
+import vo.ChattingVo;
 
 /**
  * Servlet implementation class DiscussListAction
  */
-@WebServlet("/discuss/list.do")
-public class DiscussListAction extends HttpServlet {
+@WebServlet("/chatting/list.do")
+public class ChattingListAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -26,12 +26,12 @@ public class DiscussListAction extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		List<DiscussVo> list = DiscussDao.getInstance().selectList();
+		List<ChattingVo> list = ChattingDao.getInstance().selectList();
 		
 		request.setAttribute("list", list);
 
 		//forward
-		String forward_page = "discuss_list.jsp";
+		String forward_page = "chatting_list.jsp";
 		RequestDispatcher disp = request.getRequestDispatcher(forward_page);
 		disp.forward(request, response);
 	}
