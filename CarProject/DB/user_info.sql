@@ -1,12 +1,17 @@
 /*
  	--유저 일련번호
- 	create sequence seq_user_u_idx
+ 	create sequence seq_user_u_index
  	
+ 	select * from user_info
+ 	
+ 	
+ 	update table user_info set u_name='최지영' where u_index=1
  	--유저테이블
  	create table user_info (
- 	u_idx		int,						
- 	u_id		varchar2(100)		not null, --
+ 	u_index		int,						
+ 	u_id		varchar2(100)		not null,
  	u_pwd		varchar2(100)		not null,
+ 	
  	u_gender	varchar2(100)		not null,
  	u_birth		varchar2(100)		not null,
  	u_phone		varchar2(100)		not null,
@@ -19,9 +24,16 @@
  	
  	)
  	
+ 	
+ 	alter table user_info add u_name varchar2(100)
+ 	u_name		varchar2(100)		not null,
+ 	
+ 	alter table user_info
+ 		rename column u_idx to u_index
+ 	
  	--기본키
  	alter table user_info
- 		add constraint pk_user_u_idx primary key(u_idx);
+ 		add constraint pk_user_u_index primary key(u_index);
  		
  	--아이디 unique
  	alter table user_info
@@ -65,13 +77,7 @@
  	--조회
  	select * from user_info
  	
- 	drop table user_info
  	
- 	
- 
- 
- 
- 	select * from user
  
  
  
