@@ -8,13 +8,8 @@
 </head>
 <body>
 
-<form>
-	<div>
-		<td>${ d_content }</td>
-		<td><input type="button" value="전송"></td>
-	</div>
-</form>
-
+${ vo.u_id }
+${ vo.re_content }
 
 </body>
 </html>

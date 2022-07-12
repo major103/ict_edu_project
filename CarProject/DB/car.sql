@@ -3,17 +3,15 @@
 
 select * from car_info
 
---일련번호
-create sequence seq_car_car_idx
+drop table car
 
 
 --테이블
 
-create table car_info(
-	car_idx			int,
-	car_name		varchar2(255)	not null,	--차량이름
+create table car(
+	car_name 		varchar2(255)	not null,	--차량이름
 	car_size		varchar2(255),				--차량크기
-	car_brand		varchar2(255),				--차량브랜드
+	co_name			varchar2(255),				--차량브랜드(브랜드, co_name) fk
 	car_price		varchar2(255),				--차량가격
 	car_fuel		varchar2(255),				--차량연료
 	car_type		varchar2(255),				--차량종류
@@ -29,17 +27,22 @@ create table car_info(
 )
 
 --pk
-alter table car_info
-	add constraint pk_car_info_idx primary key(car_idx);
+alter table car
+	add constraint pk_car_name primary key(car_name);
 	
 --차종 unique
-alter table car_info
-	add constraint unique_car_info_name unique(car_name);
+alter table car
+	add constraint unique_car_name unique(car_name);
 	
+--fk
+alter table car
+	add constraint fk_co_name foreign key(co_name)
+	references company(co_name);
+	
+	  
 --sample data
-insert into car_info
-	values(seq_car_car_idx.nextVal,
-			'911-Carrera',
+insert into car
+	values( '911-Carrera',
 			'coupe',
 			'porsche',
 			'158,700,000',

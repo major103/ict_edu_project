@@ -5,12 +5,12 @@
 select * from news
 
 --일련번호 관리객체	
-create sequence seq_news_n_idx
+create sequence seq_news_n_index
 	
 --table
 create table news(
 
-	n_idx		int,				--글 번호
+	n_index		int,				--글 번호
 	n_writer	varchar2(100),		--작성자
 	n_title		varchar2(100),		--뉴스 제목
 	n_content	clob,				--뉴스 내용
@@ -22,9 +22,9 @@ create table news(
 
 --pk
 alter table news
-	add constraint pk_news_n_idx primary key(n_idx);
+	add constraint pk_news_n_index primary key(n_index);
 	
-
+	
  
  
  
