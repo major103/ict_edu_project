@@ -1,5 +1,5 @@
 /*
-
+select * from grade order by g_index desc
 
 --후기 및 평점
 
