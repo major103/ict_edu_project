@@ -9,9 +9,12 @@
 	</settings>
 	
 	<typeAliases>
+		<!-- <typeAlias type="vo.BoardVo" alias="board"/> -->
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="config/mybatis/mapper/sample.xml" />
+		<mapper resource="config/mybatis/mapper/user.xml" />
+		<mapper resource="config/mybatis/mapper/car.xml" />
+		
 	</mappers>
 </configuration>

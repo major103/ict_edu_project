@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.ChattingDao;
+import dao_0.ChattingDao;
 import vo.ChattingVo;
 
 /**

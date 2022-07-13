@@ -17,16 +17,14 @@ create table grade(
 	g_point		int,  --평점		--int로변경 (수치를 받아서 평균값을 계산하기 위함)
 	u_id		varchar2(100)	--fk 작성자
 )
-
-drop table grade
  
  --pk
  alter table grade
- 	add constraint pk_grade_g_idx primary key(g_idx);
+ 	add constraint pk_grade_g_index primary key(g_index);
  	
  --fk
  alter table grade
- 	add constraint fk_grade_user_id	foreign key(u_id)
+ 	add constraint fk_grade_u_id foreign key(u_id)
  	references user_info(u_id);
  
  insert into grade
@@ -38,6 +36,7 @@ drop table grade
  			'admin')
  			
  
- 
+ --ip추가
+ alter table grade add g_ip varchar2(100)
  
  */

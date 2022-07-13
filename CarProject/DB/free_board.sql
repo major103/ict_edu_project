@@ -17,6 +17,7 @@ create table free(
 	free_date		date,						--작성일
 	free_mod_date	date,						--수정일
 	free_count		int,						--조회수
+	free_ip			varchar2(100),
 	u_id			varchar2(100) --fk		      작성자
 	
 )
@@ -41,7 +42,9 @@ alter table free
  			2325,
  			'admin')
  
- 
+
+--ip 추가
+alter table free add free_ip varchar2(100)
  
  
  

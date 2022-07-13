@@ -1,28 +1,17 @@
 package dao;
 
+import java.util.List;
+
 import vo.UserVo;
 
-public class UserDao {
+public interface UserDao {
 
-	//single-ton : 객체 1개만 생성해서 사용하자
-	static UserDao single = null;
+	List<UserVo> list();
 
-	public static UserDao getInstance() {
-
-		//객체가 없으면 생성해라
-		if (single == null)
-			single = new UserDao();
-
-		return single;
-	}
-
-	//외부에서 생성하지 말것
-	private UserDao() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public int insert(UserVo vo) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	int insert(UserVo vo) throws Exception;
+	
+	int update(UserVo vo) throws Exception;
+	
+	int delete(int idx) throws Exception;
+	
 }

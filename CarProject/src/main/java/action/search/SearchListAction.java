@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.SearchDao;
+import dao_0.SearchDao;
 import vo.SearchVo;
 
 
@@ -30,7 +30,7 @@ public class SearchListAction extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		//1.¼ö½ÅÀÎÄÚµù
+		//1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½
 		request.setCharacterEncoding("utf-8");
 		
 		String search_text = request.getParameter("search_text");
@@ -38,7 +38,7 @@ public class SearchListAction extends HttpServlet {
 		Map map = new HashMap();
 		map.put("${ param.search_text }", search_text);
 		
-		//¸ñ·Ï°¡Á®¿À±â
+		//ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		List<SearchVo> list = SearchDao.getInstance().selectList(map);
 
 		//forward

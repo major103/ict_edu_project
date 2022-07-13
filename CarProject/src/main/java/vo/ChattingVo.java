@@ -4,10 +4,21 @@ public class ChattingVo {
 
 	int		c_index;
 	String	c_title;
+	String  c_content;
 	String	c_file;
 	String 	c_date;
 	String	u_id;
+	//ip 추가
+	String c_ip;
 	
+	
+	
+	public String getC_ip() {
+		return c_ip;
+	}
+	public void setC_ip(String c_ip) {
+		this.c_ip = c_ip;
+	}
 	public int getC_index() {
 		return c_index;
 	}
@@ -19,6 +30,12 @@ public class ChattingVo {
 	}
 	public void setC_title(String c_title) {
 		this.c_title = c_title;
+	}
+	public String getC_content() {
+		return c_content;
+	}
+	public void setC_content(String c_content) {
+		this.c_content = c_content;
 	}
 	public String getC_file() {
 		return c_file;
@@ -39,4 +56,5 @@ public class ChattingVo {
 		this.u_id = u_id;
 	}
 	
-}
+	
+	}
