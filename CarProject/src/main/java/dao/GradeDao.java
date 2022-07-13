@@ -4,27 +4,14 @@ import java.util.List;
 
 import vo.GradeVo;
 
-public class GradeDao {
+public interface GradeDao {
 
-	//single-ton : 객체 1개만 생성해서 사용하자
-	static GradeDao single = null;
+	List<GradeVo> list();
 
-	public static GradeDao getInstance() {
-
-		//객체가 없으면 생성해라
-		if (single == null)
-			single = new GradeDao();
-
-		return single;
-	}
-
-	//외부에서 생성하지 말것
-	private GradeDao() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public List<GradeVo> selectList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	int insert(GradeVo vo) throws Exception;
+	
+	int update(GradeVo vo) throws Exception;
+	
+	int delete(int idx) throws Exception;
+	
 }
