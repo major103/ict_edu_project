@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao_0.FreeDao;
+import dao.FreeDao;
 import vo.FreeVo;
 
 /**
  * Servlet implementation class FreeModifyAction
  */
-@WebServlet("/free_modify.do")
+@WebServlet("/free/modify.do")
 public class FreeModifyAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
