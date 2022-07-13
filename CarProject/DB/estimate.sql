@@ -3,11 +3,13 @@
 
 --견적
 
+select * from estimate
+
 create table estimate(
 	
 	car_name		varchar2(100),		--fk	--차량 이름
-	option			varchar2(100),				--옵션
-	price			int							--가격
+	e_option			varchar2(100),			--옵션
+	e_price			int							--가격
 
 )
  

@@ -24,7 +24,10 @@
  	
  	)
  	
- 	
+--u_ip 삭제
+alter table user_info drop column u_ip
+select * from user_info
+
  	alter table user_info add u_name varchar2(100)
  	u_name		varchar2(100)		not null,
  	
@@ -77,6 +80,7 @@
  	--조회
  	select * from user_info
  	
+ 	update user_info set u_name='임현빈' where u_index=1
  	
  
  

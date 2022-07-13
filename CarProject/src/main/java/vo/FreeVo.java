@@ -2,7 +2,7 @@ package vo;
 
 public class FreeVo {
 
-	int 	free_idx;
+	int 	free_index;
 	String 	free_title;
 	String	free_content;
 	String	free_org_f;
@@ -11,21 +11,14 @@ public class FreeVo {
 	String	free_mod_date;
 	int		free_count;
 	String 	free_ip;
-	String	user_id;
+	String	u_id;
 	
-	public FreeVo(int free_idx, String free_title, String free_content, String free_ip) {
-		super();
-		this.free_idx = free_idx;
-		this.free_title = free_title;
-		this.free_content = free_content;
-		this.free_ip = free_ip;
-	}
 	
-	public int getFree_idx() {
-		return free_idx;
+	public int getFree_index() {
+		return free_index;
 	}
-	public void setFree_idx(int free_idx) {
-		this.free_idx = free_idx;
+	public void setFree_index(int free_index) {
+		this.free_index = free_index;
 	}
 	public String getFree_title() {
 		return free_title;
@@ -75,11 +68,13 @@ public class FreeVo {
 	public void setFree_ip(String free_ip) {
 		this.free_ip = free_ip;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getU_id() {
+		return u_id;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
+	
+	
 	
 }

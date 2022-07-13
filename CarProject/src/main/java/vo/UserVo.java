@@ -2,7 +2,7 @@ package vo;
 
 public class UserVo {
 
-	int u_idx;
+	int u_index;
 	String u_id;
 	String u_pwd;
 	String u_name;
@@ -10,41 +10,16 @@ public class UserVo {
 	String u_birth;
 	String u_phone;
 	String u_email;
-	String u_ip;
 	String confirm_yn;
 	String admin_yn;
 	String joindate;
 	String last_log;
 	
-	public UserVo(String u_id, String u_pwd, String u_name, String u_gender, String u_birth, String u_phone,
-			String u_email, String u_ip) {
-		super();
-		this.u_id = u_id;
-		this.u_pwd = u_pwd;
-		this.u_name = u_name;
-		this.u_gender = u_gender;
-		this.u_birth = u_birth;
-		this.u_phone = u_phone;
-		this.u_email = u_email;
-		this.u_ip = u_ip;
+	public int getU_index() {
+		return u_index;
 	}
-	public String getU_name() {
-		return u_name;
-	}
-	public void setU_name(String u_name) {
-		this.u_name = u_name;
-	}
-	public String getU_ip() {
-		return u_ip;
-	}
-	public void setU_ip(String u_ip) {
-		this.u_ip = u_ip;
-	}
-	public int getU_idx() {
-		return u_idx;
-	}
-	public void setU_idx(int u_idx) {
-		this.u_idx = u_idx;
+	public void setU_index(int u_index) {
+		this.u_index = u_index;
 	}
 	public String getU_id() {
 		return u_id;
@@ -57,6 +32,12 @@ public class UserVo {
 	}
 	public void setU_pwd(String u_pwd) {
 		this.u_pwd = u_pwd;
+	}
+	public String getU_name() {
+		return u_name;
+	}
+	public void setU_name(String u_name) {
+		this.u_name = u_name;
 	}
 	public String getU_gender() {
 		return u_gender;
@@ -88,17 +69,17 @@ public class UserVo {
 	public void setConfirm_yn(String confirm_yn) {
 		this.confirm_yn = confirm_yn;
 	}
-	public String getJoindate() {
-		return joindate;
-	}
-	public void setJoindate(String joindate) {
-		this.joindate = joindate;
-	}
 	public String getAdmin_yn() {
 		return admin_yn;
 	}
 	public void setAdmin_yn(String admin_yn) {
 		this.admin_yn = admin_yn;
+	}
+	public String getJoindate() {
+		return joindate;
+	}
+	public void setJoindate(String joindate) {
+		this.joindate = joindate;
 	}
 	public String getLast_log() {
 		return last_log;
@@ -107,4 +88,5 @@ public class UserVo {
 		this.last_log = last_log;
 	}
 	
+		
 }

@@ -8,6 +8,15 @@ public class ReplyVo {
 	int		free_index;
 	String	u_id;
 	
+	//ip 추가
+	String re_ip;
+	
+	public String getRe_ip() {
+		return re_ip;
+	}
+	public void setRe_ip(String re_ip) {
+		this.re_ip = re_ip;
+	}
 	public int getRe_index() {
 		return re_index;
 	}

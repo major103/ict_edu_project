@@ -36,5 +36,7 @@ alter table reply
 	references user_info(u_id)
  
  
+ --ip 추가
+ alter table reply add re_ip varchar2(100)
  
  */

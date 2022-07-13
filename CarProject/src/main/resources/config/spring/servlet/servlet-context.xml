@@ -21,8 +21,54 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ict.db" />
+	<!-- <context:component-scan base-package="com.oscar.setting" /> -->
 	
+	<!-- Autowired 설정 -->
+	<context:annotation-config/>
+	<!-- 수동생성 -->
+	<beans:bean class="controller.UserController">
+		<beans:property name="user_dao" ref="user_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.CarController">
+		<beans:property name="car_dao" ref="car_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.ChattingController">
+		<beans:property name="chatting_dao" ref="chatting_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.CompanyController">
+		<beans:property name="company_dao" ref="company_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.EstimateController">
+		<beans:property name="estimate_dao" ref="estimate_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.FreeController">
+		<beans:property name="free_dao" ref="free_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.GradeController">
+		<beans:property name="grade_dao" ref="grade_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.NewsController">
+		<beans:property name="news_dao" ref="news_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.RecommendController">
+		<beans:property name="recommend_dao" ref="recommend_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.ReplyController">
+		<beans:property name="reply_dao" ref="reply_dao"/>
+	</beans:bean>
+	
+	<beans:bean class="controller.WithdrawController">
+		<beans:property name="withdraw_dao" ref="withdraw_dao"/>
+	</beans:bean>
 	
 	
 </beans:beans>

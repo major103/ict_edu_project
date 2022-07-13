@@ -2,22 +2,27 @@ package vo;
 
 public class GradeVo {
 
-	int		g_idx;
+	int		g_index;
 	int		g_count;
 	int		g_good;
 	String	g_content;
 	String	g_point;
-	String	user_id;
+	String	u_id;
 	
-	public GradeVo() {
-		// TODO Auto-generated constructor stub
-	}
+	//ip 추가
+	String g_ip;
 	
-	public int getG_idx() {
-		return g_idx;
+	public String getG_ip() {
+		return g_ip;
 	}
-	public void setG_idx(int g_idx) {
-		this.g_idx = g_idx;
+	public void setG_ip(String g_ip) {
+		this.g_ip = g_ip;
+	}
+	public int getG_index() {
+		return g_index;
+	}
+	public void setG_index(int g_index) {
+		this.g_index = g_index;
 	}
 	public int getG_count() {
 		return g_count;
@@ -43,11 +48,13 @@ public class GradeVo {
 	public void setG_point(String g_point) {
 		this.g_point = g_point;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getU_id() {
+		return u_id;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
 	}
+	
+	
 	
 }

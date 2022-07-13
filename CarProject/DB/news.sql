@@ -15,8 +15,8 @@ create table news(
 	n_title		varchar2(100),		--뉴스 제목
 	n_content	clob,				--뉴스 내용
 	n_link		varchar2(100),		--작성일자
-	n_date		date,				--조회수
-	n_count		int					--링크
+	n_date		date,				--링크
+	n_count		int					--조회수
 	
 )
 
@@ -26,8 +26,17 @@ alter table news
 	
 	
  
+ insert into news
+ 	values(seq_news_n_index.nextVal,
+ 			'임현빈',
+ 			'임현빈. 남아서 공부하다..!',
+ 			'그가 남아서 공부를 하기 시작했다',
+ 			'www.naver.com',
+ 			sysdate,
+ 			seq_news_n_index.currVal
+ 			)
  
- 
+select * from news
  
  
  
