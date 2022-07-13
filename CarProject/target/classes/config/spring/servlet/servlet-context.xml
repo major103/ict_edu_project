@@ -70,5 +70,6 @@
 		<beans:property name="withdraw_dao" ref="withdraw_dao"/>
 	</beans:bean>
 	
-	
+	<!-- CK Editor Controller -->
+	<beans:bean class="controller.CKEditorFileUploadController"/>
 </beans:beans>
