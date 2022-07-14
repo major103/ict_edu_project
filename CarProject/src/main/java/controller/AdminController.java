@@ -82,7 +82,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/chatting_list";
+		return "admin/chatting/chatting_list";
 	}
 	
 	@RequestMapping("company_list.do")
@@ -91,7 +91,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/company_list";
+		return "admin/company/company_list";
 	}
 	
 	@RequestMapping("estimate_list.do")
@@ -100,7 +100,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/estimate_list";
+		return "admin/estimate/estimate_list";
 	}
 	
 	@RequestMapping("free_list.do")
@@ -109,7 +109,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/free_list";
+		return "admin/free/free_list";
 	}
 
 
@@ -120,7 +120,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/grade_list";
+		return "admin/grade/grade_list";
 	}
 
 
@@ -131,7 +131,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/news_list";
+		return "admin/news/news_list";
 	}
 	
 	@RequestMapping("recommend_list.do")
@@ -140,7 +140,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/recommend_list";
+		return "admin/recommend/recommend_list";
 	}
 	
 	@RequestMapping("reply_list.do")
@@ -149,7 +149,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/reply_list";
+		return "admin/reply/reply_list";
 	}
 
 
@@ -159,7 +159,7 @@ public class AdminController {
 		
 		List<UserVo> list = user_dao.list();
 		model.addAttribute("list",list);
-		return "admin/user_list";
+		return "admin/user/user_list";
 	}
 	
 	
@@ -169,7 +169,7 @@ public class AdminController {
 		
 		model.addAttribute("list", list);
 		
-		return "admin/withdraw_list";
+		return "admin/withdraw/withdraw_list";
 	}
 	
 }

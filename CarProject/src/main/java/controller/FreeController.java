@@ -1,14 +1,11 @@
 package controller;
 
-import java.util.List;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.FreeDao;
@@ -29,28 +26,19 @@ public class FreeController {
 	@Autowired
 	HttpSession session;
 		
-		@RequestMapping("/free/list.do")
-		public String list(Model model) {
-			List<FreeVo> list = free_dao.list();
-			
-			model.addAttribute("list",list);
-			
-			return "free_list";
-		}
+	@RequestMapping("/admin/free_insert_form.do")
+	public String adminFreeInsertForm() {
 		
-		@RequestMapping("/free/insert_form.do")
-		public String insertForm() {
-			
-			return "free_insert_form";
-		}
+		return "admin/free/free_insert_form";
+	}
+
+	
+	@RequestMapping("/admin/free_insert.do")
+	public String adminFreeInsert(FreeVo vo) throws Exception {
 		
-		@RequestMapping("/free/insert.do")
-		public String insert(FreeVo vo) {
-			
+		free_dao.insert(vo);
 		
-			
-			return "redirect:free_list.do";
-		}
-		
+		return "redirect:free_list.do";
+	}
 		
 }

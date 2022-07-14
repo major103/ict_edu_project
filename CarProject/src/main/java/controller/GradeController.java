@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.GradeDao;
@@ -19,12 +16,18 @@ public class GradeController {
 	}
 	
 	
-	@RequestMapping("/grade/list.do")
-	public String list(Model model) {
-		List<GradeVo> list = grade_dao.list();
+	@RequestMapping("/admin/grade_insert_form.do")
+	public String adminGradeInsertForm() {
 		
-		model.addAttribute(list);
+		return "admin/grade/grade_insert_form";
+	}
+
+	
+	@RequestMapping("/admin/grade_insert.do")
+	public String adminGradeInsert(GradeVo vo) throws Exception {
 		
-		return "grade_list";
+		grade_dao.insert(vo);
+		
+		return "redirect:grade_list.do";
 	}
 }

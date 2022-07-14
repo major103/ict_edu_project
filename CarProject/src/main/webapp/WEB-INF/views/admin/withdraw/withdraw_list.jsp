@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-xs-5">
 							<h2>
-								 <b>Estimate</b>
+								 <b>User Withdraw</b>
 							</h2>
 						</div>
 
@@ -37,19 +37,14 @@
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th>No.</th>
-							<th>ID</th>
-							<th>PWD</th>
+							<th>아이디</th>
 							<th>이름</th>
 							<th>성별</th>
 							<th>생년월일</th>
-							<th>핸드폰번호</th>
-							<th>Email</th>
-							<th>IP</th>
-							<th>인증여부</th>
-							<th>관리자여부</th>
-							<th>가입일</th>
+							<th>전화번호</th>
+							<th>이메일</th>
 							<th>마지막접속일</th>
+							<th>삭제 예정일</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -57,18 +52,14 @@
 						
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
-								<td>${ vo.u_idx }</td>
 								<td>${ vo.u_id }</td>
-								<td>${ vo.u_pwd }</td>
 								<td>${ vo.u_name }</td>
 								<td>${ vo.u_gender }</td>
 								<td>${ vo.u_birth }</td>
 								<td>${ vo.u_phone }</td>
 								<td>${ vo.u_email }</td>
-								<td>${ vo.confirm_yn }</td>
-								<td>${ vo.admin_yn }</td>
-								<td>${ fn:substring(vo.joindate,0,10) }</td>
-								<td>${ vo.last_log }</td>
+								<td>${ vo.last_date}</td>
+								<td>${ vo.drop_date }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.WithdrawDao;
@@ -19,12 +16,19 @@ public class WithdrawController {
 	}
 	
 	
-	@RequestMapping("/withdraw/list.do")
-	public String list(Model model) {
-		List<WithdrawVo> list = withdraw_dao.list();
+	@RequestMapping("/admin/withdraw_insert_form.do")
+	public String adminWithdrawInsertForm() {
 		
-		model.addAttribute(list);
-		
-		return "withdraw_list";
+		return "grade/withdraw/withdraw_insert_form";
 	}
+
+	
+	@RequestMapping("/admin/withdraw_insert.do")
+	public String adminWithdrawInsert(WithdrawVo vo) throws Exception {
+		
+		withdraw_dao.insert(vo);
+		
+		return "redirect:withdraw_list.do";
+	}
+	
 }

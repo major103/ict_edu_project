@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.RecommendDao;
@@ -19,12 +16,18 @@ public class RecommendController {
 	}
 	
 	
-	@RequestMapping("/recommend/list.do")
-	public String list(Model model) {
-		List<RecommendVo> list = recommend_dao.list();
+	@RequestMapping("/admin/recommend_insert_form.do")
+	public String adminRecommendInsertForm() {
 		
-		model.addAttribute(list);
+		return "admin/recommend/recommend_insert_form";
+	}
+
+	
+	@RequestMapping("/recommend/recommend_insert.do")
+	public String adminRecommendInsert(RecommendVo vo) throws Exception {
 		
-		return "recommend_list";
+		recommend_dao.insert(vo);
+		
+		return "redirect:recommend_list.do";
 	}
 }

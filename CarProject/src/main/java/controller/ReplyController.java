@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.ReplyDao;
@@ -19,12 +16,18 @@ public class ReplyController {
 	}
 	
 	
-	@RequestMapping("/reply/list.do")
-	public String list(Model model) {
-		List<ReplyVo> list = reply_dao.list();
+	@RequestMapping("/admin/reply_insert_form.do")
+	public String adminReplyInsertForm() {
 		
-		model.addAttribute(list);
+		return "admin/reply/reply_insert_form";
+	}
+
+	
+	@RequestMapping("/admin/reply_insert.do")
+	public String adminReplyInsert(ReplyVo vo) throws Exception {
 		
-		return "Reply_list";
+		reply_dao.insert(vo);
+		
+		return "redirect:reply_list.do";
 	}
 }

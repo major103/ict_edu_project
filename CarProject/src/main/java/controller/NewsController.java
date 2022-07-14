@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.NewsDao;
@@ -19,12 +16,18 @@ public class NewsController {
 	}
 	
 	
-	@RequestMapping("/news/list.do")
-	public String list(Model model) {
-		List<NewsVo> list = news_dao.list();
+	@RequestMapping("/admin/news_insert_form.do")
+	public String adminNewsInsertForm() {
 		
-		model.addAttribute(list);
+		return "admin/news/news_insert_form";
+	}
+
+	
+	@RequestMapping("/admin/news_insert.do")
+	public String adminNewsInsert(NewsVo vo) throws Exception {
 		
-		return "news_list";
+		news_dao.insert(vo);
+		
+		return "redirect:news_list.do";
 	}
 }

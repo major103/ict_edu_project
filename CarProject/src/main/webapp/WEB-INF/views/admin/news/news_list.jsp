@@ -16,10 +16,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <title>Insert title here</title>
+<style type="text/css">
+
+	#btn1 {
+		float: right;
+		margin-right: 30px;
+	}	
+
+</style>
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -28,10 +36,14 @@
 					<div class="row">
 						<div class="col-xs-5">
 							<h2>
-								 <b>Grade Board</b>
+								 <b>News</b>
 							</h2>
 						</div>
-
+					<div class="btn-group" id="btn1">
+						<button type="button" class="btn btn-dark" onclick="location.href='news_insert_form.do'">Insert</button>
+						<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
+						<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
+					</div>
 					</div>
 				</div>
 				<table class="table table-striped table-hover">
@@ -39,10 +51,11 @@
 						<tr>
 							<th>No.</th>
 							<th>작성자</th>
+							<th>제목</th>
 							<th>내용</th>
-							<th>추천수</th>
+							<th>작성일자</th>
 							<th>조회수</th>
-							<th>평점</th>
+							<th>링크</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -50,12 +63,13 @@
 						
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
-								<td>${ vo.g_index }</td>
-								<td>${ vo.u_id }</td>
-								<td>${ vo.g_content }</td>
-								<td>${ vo.g_good }</td>
-								<td>${ vo.g_count }</td>
-								<td>${ vo.g_point }</td>
+								<td>${ vo.n_index }</td>
+								<td>${ vo.n_writer }</td>
+								<td>${ vo.n_title }</td>
+								<td>${ vo.n_content }</td>
+								<td>${ vo.n_link }</td>
+								<td>${ vo.n_date }</td>
+								<td>${ vo.n_count }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

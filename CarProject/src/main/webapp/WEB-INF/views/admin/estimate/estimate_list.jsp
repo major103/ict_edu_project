@@ -16,10 +16,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <title>Insert title here</title>
+<style type="text/css">
+
+	#btn1 {
+		float: right;
+		margin-right: 30px;
+	}	
+
+</style>
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -28,19 +36,22 @@
 					<div class="row">
 						<div class="col-xs-5">
 							<h2>
-								 <b>Recommend</b>
+								 <b>Estimate</b>
 							</h2>
 						</div>
-
+					<div class="btn-group" id="btn1">
+						<button type="button" class="btn btn-dark" onclick="location.href='estimate_insert_form.do'">Insert</button>
+						<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
+						<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
+					</div>
 					</div>
 				</div>
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
 							<th>차량이름</th>
-							<th>성별</th>
-							<th>나이</th>
-							<th>회원아이디</th>
+							<th>옵션</th>
+							<th>가격</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -49,9 +60,8 @@
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
 								<td>${ vo.car_name }</td>
-								<td>${ vo.gender }</td>
-								<td>${ vo.age }</td>
-								<td>${ vo.u_id }</td>
+								<td>${ vo.e_option }</td>
+								<td>${ vo.e_price }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

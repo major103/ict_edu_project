@@ -9,6 +9,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select * from car
 </select>
 
+<!-- insert -->
+<insert id="car_insert" parameterType="vo.CarVo">
+	insert into car
+	values( #{ car_name },
+			#{ car_size },
+			#{ co_name },
+			#{ car_price },
+			#{ car_fuel },
+			#{ car_type },
+			#{ car_fcost },
+			#{ car_output },
+			#{ car_torq },
+			#{ car_exhaust },
+			#{ car_engine },
+			#{ car_drive },
+			#{ car_change },
+			#{ car_photo }
+			)
+</insert>
 </mapper>
 
 

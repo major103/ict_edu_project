@@ -16,10 +16,19 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <title>Insert title here</title>
+<style type="text/css">
+
+	#btn1 {
+		float: right;
+		margin-right: 30px;
+	}	
+
+</style>
+
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -31,25 +40,25 @@
 								 <b>Company</b>
 							</h2>
 						</div>
-
+						<div class="btn-group" id="btn1">
+							<button type="button" class="btn btn-dark" onclick="location.href='company_insert_form.do'">Insert</button>
+							<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
+							<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
+						</div>
 					</div>
 				</div>
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th>No.</th>
-							<th>ID</th>
-							<th>PWD</th>
-							<th>이름</th>
-							<th>성별</th>
-							<th>생년월일</th>
-							<th>핸드폰번호</th>
-							<th>Email</th>
-							<th>IP</th>
-							<th>인증여부</th>
-							<th>관리자여부</th>
-							<th>가입일</th>
-							<th>마지막접속일</th>
+							<th>회사이름</th>
+							<th>소재지</th>
+							<th>창업일</th>
+							<th>창립자</th>
+							<th>슬로건</th>
+							<th>대표업종</th>
+							<th>회사소개</th>
+							<th>로고(s)</th>
+							<th>로고(L)</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -57,18 +66,15 @@
 						
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
-								<td>${ vo.u_idx }</td>
-								<td>${ vo.u_id }</td>
-								<td>${ vo.u_pwd }</td>
-								<td>${ vo.u_name }</td>
-								<td>${ vo.u_gender }</td>
-								<td>${ vo.u_birth }</td>
-								<td>${ vo.u_phone }</td>
-								<td>${ vo.u_email }</td>
-								<td>${ vo.confirm_yn }</td>
-								<td>${ vo.admin_yn }</td>
-								<td>${ fn:substring(vo.joindate,0,10) }</td>
-								<td>${ vo.last_log }</td>
+								<td>${ vo.co_name }</td>
+								<td>${ vo.co_loc }</td>
+								<td>${ vo.co_date }</td>
+								<td>${ vo.co_pres }</td>
+								<td>${ vo.co_motto }</td>
+								<td>${ vo.co_business }</td>
+								<td>${ vo.co_intro }</td>
+								<td>${ vo.co_photo_s }</td>
+								<td>${ vo.co_photo_l }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

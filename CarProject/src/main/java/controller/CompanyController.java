@@ -1,9 +1,6 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dao.CompanyDao;
@@ -18,12 +15,19 @@ public class CompanyController {
 		this.company_dao = company_dao;
 	}
 
-	@RequestMapping("/company/list.do")
-	public String list(Model model) {
-		List<CompanyVo> list = company_dao.list();
+	@RequestMapping("/admin/company_insert_form.do")
+	public String adminCompanyInsertForm() {
 		
-		model.addAttribute(list);
-		
-		return "company_list";
+		return "admin/company/company_insert_form";
 	}
+
+	
+	@RequestMapping("/admin/company_insert.do")
+	public String adminCompanyInsert(CompanyVo vo) throws Exception {
+		
+		company_dao.insert(vo);
+		
+		return "redirect:company_list.do";
+	}
+	
 }
