@@ -1,5 +1,7 @@
 /*
 
+select * from user_info
+
 --뉴스
 
 select * from news

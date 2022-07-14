@@ -1,7 +1,7 @@
 /*
 
 --회사 정보
-
+select * from company order by co_name asc
 create table company(
 	
 	co_name			varchar2(100),		--회사이름
