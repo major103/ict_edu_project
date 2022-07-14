@@ -1,28 +1,61 @@
 package dao_0;
 
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import service.MyBatisConnector;
 import vo.UserVo;
 
 public class UserDao {
-
-	//single-ton : ï¿½ï¿½Ã¼ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	
+	SqlSessionFactory factory;
+	//single-ton : °´Ã¼ 1°³¸¸ »ý¼ºÇØ¼­ »ç¿ëÇÏÀÚ!
+	//½ºÅÂÆ½°´Ã¼´Â ¹«Á¶°Ç ÇÏ³ª¸¸ ¸¸µé¾îÁø´Ù.
 	static UserDao single = null;
 
+	//½ºÅÂÆ½Àº ¹«Á¶°Ç ½ºÅÂÆ½À¸·Î¸¸
 	public static UserDao getInstance() {
 
-		//ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½
+		//°´Ã¼°¡ ¾øÀ¸¸é »ý¼ºÇØ¶ó È£ÃâµÈ ÇÑ¹ø¸¸ °´Ã¼¸¦ »ý¼º
 		if (single == null)
 			single = new UserDao();
 
 		return single;
 	}
 
-	//ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	//¿ÜºÎ¿¡¼­ °´Ã¼¸¦ »ý¼ºÇÏÁö ¸øÇÏ°Ô ¸·À½
 	private UserDao() {
 		// TODO Auto-generated constructor stub
+		factory = MyBatisConnector.getInstance().getSqlSessionFactory();
+	}
+	
+	public UserVo selectOne(String u_id) {
+		
+		UserVo vo = null;
+		
+		SqlSession sqlSession = factory.openSession();
+		
+		vo = sqlSession.selectOne("user.user_one_id", u_id);
+		
+		sqlSession.close();
+		
+		return vo;
 	}
 
-	public int insert(UserVo vo) {
+	public UserVo selectOne1(Map map) {
 		// TODO Auto-generated method stub
-		return 0;
+		UserVo u_id = null;
+		
+		SqlSession sqlSession = factory.openSession();
+		
+		u_id = sqlSession.selectOne("user.user_one_phone", map);
+		
+		sqlSession.close();
+		
+		return u_id;
 	}
+	
+
 }
