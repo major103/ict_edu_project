@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import dao.FreeDao;
+import vo.FreeVo;
 import vo.UserVo;
 
 /**
@@ -53,9 +55,19 @@ public class FreeInsertAction extends HttpServlet {
 			return;
 		}
 		
-		int user_id = user.getU_idx();
+		String u_id = user.getU_id();
 		
-		String free_title = mr.getParameter(free_org_f)	//아직 다 안함 내일 할게요
+		int free_idx = Integer.parseInt(request.getParameter("free_idx"));
+		String free_title 	= mr.getParameter("free_title");
+		String free_content = mr.getParameter("free_content").replaceAll("\r\n", "<br>");
+		
+		String free_ip = request.getRemoteAddr();
+		
+		FreeVo vo = new FreeVo(free_idx, free_title, free_content, free_org_f, free_ip, u_id);
+		
+		int res = FreeDao.getInstance().insert(vo);
+		
+		response.sendRedirect("list.do");
 
 	}
 

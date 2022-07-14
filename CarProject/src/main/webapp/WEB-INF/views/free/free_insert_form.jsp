@@ -32,7 +32,7 @@
 			return;
 		}
 		
-		f.action = "free/insert.do"
+		f.action = "insert.do"
 		f.submit();
 	}
 
@@ -50,7 +50,7 @@
 			</tr>
 			<tr>
 				<th>작성자</th>
-				<td><input name="u_id" readonly="readonly"></td>
+				<td><input name="user_id" readonly="readonly"></td>
 			</tr>
 			<tr>
 				<th>첨부파일</th>

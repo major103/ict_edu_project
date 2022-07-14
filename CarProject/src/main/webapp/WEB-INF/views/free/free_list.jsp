@@ -15,6 +15,7 @@
 <body>
 <div id="free_list">
 <table>
+<input type="button" value="글쓰기" onclick="location.href='free_insert_form.jsp';">
 	<tr>
 		<th>글번호</th>
 		<th>제목</th>

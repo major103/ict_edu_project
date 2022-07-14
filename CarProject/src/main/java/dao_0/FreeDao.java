@@ -11,21 +11,21 @@ import vo.FreeVo;
 
 public class FreeDao {
 	
-	//single-ton : ï¿½ï¿½Ã¼ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//single-ton : °´Ã¼ 1°³¸¸ »ý¼ºÇØ¼­ »ç¿ëÇÏÀÚ
 	static FreeDao single = null;
 
 	SqlSessionFactory factory;
 	
 	public static FreeDao getInstance() {
 
-		//ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½
+		//°´Ã¼°¡ ¾øÀ¸¸é »ý¼ºÇØ¶ó
 		if (single == null)
 			single = new FreeDao();
 
 		return single;
 	}
 
-	//ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	//¿ÜºÎ¿¡¼­ »ý¼ºÇÏÁö ¸»°Í
 	private FreeDao() {
 		// TODO Auto-generated constructor stub
 		factory = MyBatisConnector.getInstance().getSqlSessionFactory();
@@ -77,6 +77,19 @@ public class FreeDao {
 		SqlSession sqlSession = factory.openSession(true);
 		
 		res = sqlSession.update("free.free_update", vo);
+		
+		sqlSession.close();
+		
+		return res;
+	}
+
+	public int insert(FreeVo vo) {
+		// TODO Auto-generated method stub
+		int res = 0;
+		
+		SqlSession sqlSession = factory.openSession(true);
+		
+		res = sqlSession.insert("free.free_insert", vo);
 		
 		sqlSession.close();
 		
