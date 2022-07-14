@@ -2,12 +2,12 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="free">
+<mapper namespace="grade">
 
-<!-- 전체 유저조회 -->
-<select id="free_list" resultType="vo.FreeVo">
-	select * from free order by free_index desc
-</select>
+<!-- select -->
+	<select id="grade_list" resultType="vo.GradeVo">
+		select * from grade order by g_index desc
+	</select>
 
 </mapper>
 

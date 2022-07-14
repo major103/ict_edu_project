@@ -72,4 +72,20 @@
 	
 	<!-- CK Editor Controller -->
 	<beans:bean class="controller.CKEditorFileUploadController"/>
+	
+	
+	<!-- Admin Controller -->
+	<beans:bean class="controller.AdminController">
+		<beans:constructor-arg ref="car_dao"/>
+		<beans:constructor-arg ref="chatting_dao"/>
+		<beans:constructor-arg ref="company_dao"/>
+		<beans:constructor-arg ref="estimate_dao"/>
+		<beans:constructor-arg ref="free_dao"/>
+		<beans:constructor-arg ref="grade_dao"/>
+		<beans:constructor-arg ref="news_dao"/>
+		<beans:constructor-arg ref="recommend_dao"/>
+		<beans:constructor-arg ref="reply_dao"/>
+		<beans:constructor-arg ref="user_dao"/>
+		<beans:constructor-arg ref="withdraw_dao"/>
+	</beans:bean>
 </beans:beans>

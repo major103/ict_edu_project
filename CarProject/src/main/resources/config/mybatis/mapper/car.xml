@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 전체 유저조회 -->
 <select id="car_list" resultType="vo.CarVo">
-	select * from car_info
+	select * from car
 </select>
 
 </mapper>

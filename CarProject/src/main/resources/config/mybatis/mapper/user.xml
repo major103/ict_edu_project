@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 전체 유저조회 -->
 <select id="user_list" resultType="vo.UserVo">
-	select * from user_info order by u_idx desc
+	select * from user_info order by u_index desc
 </select>
 
 </mapper>

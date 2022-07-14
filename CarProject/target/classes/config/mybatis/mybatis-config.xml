@@ -13,8 +13,17 @@
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="config/mybatis/mapper/user.xml" />
 		<mapper resource="config/mybatis/mapper/car.xml" />
+		<mapper resource="config/mybatis/mapper/chatting.xml" />
+		<mapper resource="config/mybatis/mapper/company.xml" />
+		<mapper resource="config/mybatis/mapper/estimate.xml" />
+		<mapper resource="config/mybatis/mapper/free.xml" />
+		<mapper resource="config/mybatis/mapper/grade.xml" />
+		<mapper resource="config/mybatis/mapper/news.xml" />
+		<mapper resource="config/mybatis/mapper/recommend.xml" />
+		<mapper resource="config/mybatis/mapper/reply.xml" />
+		<mapper resource="config/mybatis/mapper/user.xml" />
+		<mapper resource="config/mybatis/mapper/withdraw.xml" />
 		
 	</mappers>
 </configuration>
