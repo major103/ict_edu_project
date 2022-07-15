@@ -57,5 +57,44 @@ public class UserDao {
 		return u_id;
 	}
 	
+	public UserVo selectOne2(Map map) {
+		// TODO Auto-generated method stub
+		UserVo u_id = null;
+		
+		SqlSession sqlSession = factory.openSession();
+		
+		u_id = sqlSession.selectOne("user.user_one_email", map);
+		
+		sqlSession.close();
+		
+		return u_id;
+	}
+	
+	public UserVo selectOne3(Map map) {
+		// TODO Auto-generated method stub
+		UserVo u_pwd = null;
+		
+		SqlSession sqlSession = factory.openSession();
+		
+		u_pwd = sqlSession.selectOne("user.user_one_pwd", map);
+		
+		sqlSession.close();
+		
+		return u_pwd;
+	}
+
+	public UserVo update(String new_pwd) {
+		// TODO Auto-generated method stub
+		UserVo vo = null;
+		
+		SqlSession sqlSession = factory.openSession();
+		
+		vo = sqlSession.selectOne("user.user_pwd_find", new_pwd);
+		
+		sqlSession.close();
+		
+		return vo;
+	}
+	
 
 }

@@ -11,6 +11,7 @@
 	
 	function pwd_find1(f) {
 		var id = f.id.value.trim();
+		var name = f.name.value.trim();
 		var phone_center = f.phone_center.value;
 		var phone_end = f.phone_end.value;
 		
@@ -18,6 +19,12 @@
 			alert('아이디를 입력하세요');
 			f.id.value = '';
 			f.id.focus();
+			return;
+		}
+		if(name == ''){
+			alert('이름을 입력하세요');
+			f.name.value = '';
+			f.name.focus();
 			return;
 		}
 		if(regular_phone.test(phone_center) == false){
@@ -33,7 +40,7 @@
 			return;
 		}
 		
-		f.action = "pwd_find_result.jsp";
+		f.action = "pwd_find_process.do";
 		f.submit();
 	}
 </script>
@@ -67,6 +74,10 @@
 				<tr>
 					<td>아이디</td>
 					<td><input type="text" name="id" style="width: 120px"></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" style="width: 120px"></td>
 				</tr>
 				<tr>
 					<td>휴대전화</td>

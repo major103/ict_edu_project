@@ -57,13 +57,13 @@
 	function showMessage() {
 		// /user/login_form.do?reason=fail_id
 		if("${ param.reason eq 'fail_id' }" == "true"){
-			alert('아이디가 틀렸습니다');
+			alert('존재하지 않는 아이디 이거나 비밀번호가 틀렸습니다');
 			return;
 		}	
 		
 		// /user/login_form.do?reason=fail_pwd
 		if("${ param.reason eq 'fail_pwd' }" == "true"){
-			alert('비밀번호가 틀렸습니다');
+			alert('존재하지 않는 아이디 이거나 비밀번호가 틀렸습니다');
 			return;
 		}
 		
