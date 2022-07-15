@@ -17,7 +17,7 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public List<UserVo> list() {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList("user.user_list");
 	}
 
 	@Override

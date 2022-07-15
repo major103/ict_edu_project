@@ -17,7 +17,7 @@ public class WithdrawDaoImpl implements WithdrawDao {
 	@Override
 	public List<WithdrawVo> list() {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList("withdraw_withdraw_list");
 	}
 
 	@Override
