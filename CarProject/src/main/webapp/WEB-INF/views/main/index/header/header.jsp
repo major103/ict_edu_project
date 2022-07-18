@@ -4,43 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script>
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {
-					return;
-				}
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "https://connect.facebook.net/ko_KR/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId : '266492947534063',
-					cookie : true,
-					xfbml : true,
-					version : 'v2.8'
-				});
-			};
-
-			function ogShare() {
-				FB
-						.ui(
-								{
-									method : 'share_open_graph',
-									action_type : 'og.share',
-									action_properties : JSON
-											.stringify({
-												object : 'https://developers.facebook.com/docs/opengraph/getting-started',
-											})
-								}, function(response) {
-									// Debug response (optional)
-									console.log(response);
-								});
-			}
-		</script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -48,6 +11,7 @@
 		<header>
 			<div class="top">
 				<ul>
+					<!-- 오른쪽 위 -->
 					<li><a href="/sub/login.html"><span>로그인</span></a></li>
 					<li class="top_menu"><a href="javascript:void(0)"><strong>마이페이지</strong></a>
 						<div class="pc_toplink_menu" style="display: none;">
@@ -65,6 +29,7 @@
 						</div></li>
 				
 					<li>
+						<!-- 오른쪽 위 돋보기 검색기능 -->
 						<div class="search">
 							<div class="left">
 								<input name="textValue" id="textValue" type="search"
@@ -77,6 +42,7 @@
 				</ul>
 			</div>
 			<div class="bottom">
+				<!-- 왼쪽 위 큰 로고 -->
 				<a class="logo" href="/"><img
 					src="../images/main/header/logo.png"></a>
 				<div class="gnb">
@@ -102,25 +68,28 @@
 						</div>
 					</div>
 					<ul>
-						<li><a href="/sub/list.html?ttl=WHICHCAR"><span>NEWS</span></a></li>
 						<li><a href="/sub/list.html?ttl=NEWCAR"><span>견적내기</span></a></li>
 						<li><a href="/sub/list.html?ttl=NEWS"><span>매장검색</span></a></li>
 						<li><a href="/sub/list.html?ttl=COLUMN"><span>브랜드검색</span></a></li>
 						<li class="top_menu"><a href="javascript:void(0)"><span>게시판</span></a>
-						<div class="pc_toplink_menu" style="display: none;">
-							<p>
-								<a href="http://imagazinekorea.com/etc/online_ad.asp"
-									target="_blank">광고/제휴</a>
-							</p>
-							<p>
-								<a href="http://imagazinekorea.com/etc/notice.asp"
-									target="_blank">고객센터</a>
-							</p>
-							<p>
-								<a href="http://www.kayamedia.com/" target="_blank">회사소개</a>
-							</p>
-						</div></li>
-						<!--li><a href="/sub/community.html"><span>COMMUNITY</span></a></li-->
+							<div class="pc_toplink_menu" style="display: none;">
+								<p>
+									<a href="http://imagazinekorea.com/etc/online_ad.asp"
+										target="_blank">뉴스</a>
+								</p>
+								<p>
+									<a href="http://imagazinekorea.com/etc/notice.asp"
+										target="_blank">자유게시판</a>
+								</p>
+								<p>
+									<a href="http://imagazinekorea.com/etc/notice.asp"
+										target="_blank">토론게시판</a>
+								</p>
+								<p>
+									<a href="http://www.kayamedia.com/" target="_blank">후기 및 평점</a>
+								</p>
+							</div>
+						</li>
 						
 						<li class="side_link">
 							<ul>
@@ -140,83 +109,46 @@
 				</div>
 			</div>
 		</header>
-		<script>
-			function btnClick() {
-				location.href = "/sub/search.html?textValue="
-						+ $('#textValue').val();
-			}
-			function onkeyDown2() {
-				if (event.keyCode == 13) {
-					location.href = "/sub/search.html?textValue="
-							+ $('#textValue').val();
-				}
-			}
-			function onkeyDown3() {
-				if (event.keyCode == 13) {
-					location.href = "/sub/search.html?textValue="
-							+ $('#mText').val();
-				}
-			}
-			function clearText() {
-				$("#mText").val("");
-			}
+<!-- 		<script> -->
+<!--  			function btnClick() { -->
+<!--  				location.href = "/sub/search.html?textValue=" -->
+<!--  						+ $('#textValue').val(); -->
+<!--  			} -->
+<!--  			function onkeyDown2() { -->
+<!--  				if (event.keyCode == 13) { -->
+<!--  					location.href = "/sub/search.html?textValue=" -->
+<!--  							+ $('#textValue').val(); -->
+<!--  				} -->
+<!--  			} -->
+<!--  			function onkeyDown3() { -->
+<!--  				if (event.keyCode == 13) { -->
+<!--  					location.href = "/sub/search.html?textValue=" -->
+<!--  							+ $('#mText').val(); -->
+<!--  				} -->
+<!--  			} -->
+<!--  			function clearText() { -->
+<!--  				$("#mText").val(""); -->
+<!--  			} -->
 
-			function menuImage(img, mode) {
-				if (mode == "Y")
-					img.src = "/images/common/ElectriCar_navi_pc_r.png";
-				else
-					img.src = "/images/common/ElectriCar_navi_pc_n.png";
-			}
+<!--  			function menuImage(img, mode) { -->
+<!--  				if (mode == "Y") -->
+<!--  					img.src = "/images/common/ElectriCar_navi_pc_r.png"; -->
+<!--  				else -->
+<!--  					img.src = "/images/common/ElectriCar_navi_pc_n.png"; -->
+<!--  			} -->
 
-			function menuImage_mobile(img, mode) {
-				if (mode == "Y")
-					img.src = "/images/common/ElectriCar_navi_m_r.png";
-				else
-					img.src = "/images/common/ElectriCar_navi_m_n.png";
-			}
-		</script>
+<!--  			function menuImage_mobile(img, mode) { -->
+<!--  				if (mode == "Y") -->
+<!--  					img.src = "/images/common/ElectriCar_navi_m_r.png"; -->
+<!--  				else -->
+<!--  					img.src = "/images/common/ElectriCar_navi_m_n.png"; -->
+<!--  			} -->
+<!-- 		</script> -->
 
 		<!-- tdn:s -->
-		<script src="//ads.tapzin.com/imagazine/motortrend/tdn.js"></script>
+<!-- 		<script src="//ads.tapzin.com/imagazine/motortrend/tdn.js"></script> -->
 		<!-- tdn:e -->
 		<!-- header:e -->
-		
-		
-		<script>
-			function btnClick() {
-				location.href = "/sub/search.html?textValue="
-						+ $('#textValue').val();
-			}
-			function onkeyDown2() {
-				if (event.keyCode == 13) {
-					location.href = "/sub/search.html?textValue="
-							+ $('#textValue').val();
-				}
-			}
-			function onkeyDown3() {
-				if (event.keyCode == 13) {
-					location.href = "/sub/search.html?textValue="
-							+ $('#mText').val();
-				}
-			}
-			function clearText() {
-				$("#mText").val("");
-			}
-
-			function menuImage(img, mode) {
-				if (mode == "Y")
-					img.src = "/images/common/ElectriCar_navi_pc_r.png";
-				else
-					img.src = "/images/common/ElectriCar_navi_pc_n.png";
-			}
-
-			function menuImage_mobile(img, mode) {
-				if (mode == "Y")
-					img.src = "/images/common/ElectriCar_navi_m_r.png";
-				else
-					img.src = "/images/common/ElectriCar_navi_m_n.png";
-			}
-		</script>
 		
 </body>
 </html>

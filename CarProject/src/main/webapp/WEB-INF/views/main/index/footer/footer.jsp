@@ -10,6 +10,7 @@
 <!-- footer:s -->
 <div class="footer">
 			<footer>
+				<!-- 흰글씨 -->
 				<div class="footer_logo">
 					<a href="/index.html"><img src="../images/main/footer/logo.png"
 						alt="KAYA MEDIA CORPORATION" /></a>
