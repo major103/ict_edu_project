@@ -22,28 +22,28 @@
 	$(window).scroll(function (event) {
 		var scrollY = $(this).scrollTop();
 		
-		if(autoFocus){
-			$.each($("#compRightBody tr[name='tabSel']").get().reverse(), function(index, item){
-				var objectTop = $(item).offset().top;
-				if(scrollY + 262 > objectTop) {
-					var target = $(item).attr('id');
-					$("#tabComp li button").removeClass("on");
-					$("#tabComp li button[tab='"+target+"']").addClass("on");
-					return false;
-				}
-			});
-		}
+// 		if(autoFocus){
+// 			$.each($("#compRightBody tr[name='tabSel']").get().reverse(), function(index, item){
+// 				var objectTop = $(item).offset().top;
+// 				if(scrollY + 262 > objectTop) {
+// 					var target = $(item).attr('id');
+// 					$("#tabComp li button").removeClass("on");
+// 					$("#tabComp li button[tab='"+target+"']").addClass("on");
+// 					return false;
+// 				}
+// 			});
+// 		}
 		
 		
 		var cHeadH = $(".compHead").height()+2; // border-bottom 2px;
-		var cTopH = $(".compTop").height()+2; // border-bottom 2px;
+		//var cTopH = $(".compTop").height()+2; // border-bottom 2px;
 		
 		// 상단 고정
 		if(scrollY>cHeadH){
-			$(".compTop").addClass("fixed");
+			//$(".compTop").addClass("fixed");
 			$(".compBox").addClass("fixed");
 		}else{
-			$(".compTop").removeClass("fixed");
+			//$(".compTop").removeClass("fixed");
 			$(".compBox").removeClass("fixed");
 		}
 		
