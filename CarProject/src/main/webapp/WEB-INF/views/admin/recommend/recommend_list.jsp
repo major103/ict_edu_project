@@ -16,10 +16,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <title>Insert title here</title>
+<style type="text/css">
+
+	#btn1 {
+		float: right;
+		margin-right: 30px;
+	}	
+
+</style>
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -28,23 +36,23 @@
 					<div class="row">
 						<div class="col-xs-5">
 							<h2>
-								 <b>User Withdraw</b>
+								 <b>Recommend</b>
 							</h2>
 						</div>
-
+					<div class="btn-group" id="btn1">
+						<button type="button" class="btn btn-dark" onclick="location.href='recommend_insert_form.do'">Insert</button>
+						<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
+						<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
+					</div>
 					</div>
 				</div>
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th>아이디</th>
-							<th>이름</th>
+							<th>차량이름</th>
 							<th>성별</th>
-							<th>생년월일</th>
-							<th>전화번호</th>
-							<th>이메일</th>
-							<th>마지막접속일</th>
-							<th>삭제 예정일</th>
+							<th>나이</th>
+							<th>회원아이디</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -52,14 +60,10 @@
 						
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
+								<td>${ vo.car_name }</td>
+								<td>${ vo.gender }</td>
+								<td>${ vo.age }</td>
 								<td>${ vo.u_id }</td>
-								<td>${ vo.u_name }</td>
-								<td>${ vo.u_gender }</td>
-								<td>${ vo.u_birth }</td>
-								<td>${ vo.u_phone }</td>
-								<td>${ vo.u_email }</td>
-								<td>${ vo.last_date}</td>
-								<td>${ vo.drop_date }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

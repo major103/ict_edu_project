@@ -19,6 +19,7 @@ create table withdraw(
 
 select * from withdraw
 
+alter table
 
 --pk?
 alter table withdraw

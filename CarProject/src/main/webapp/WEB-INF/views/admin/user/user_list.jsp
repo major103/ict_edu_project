@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- menu bar 삽입 -->
-	<%@include file="menu_bar.jsp" %>
+	<%@include file="../menu_bar.jsp" %>
 	
 	<div class="container">
 		<div class="table-responsive">
@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-xs-5">
 							<h2>
-								 <b>Free Board</b>
+								 <b>USER</b>
 							</h2>
 						</div>
 
@@ -38,15 +38,17 @@
 					<thead>
 						<tr>
 							<th>No.</th>
-							<th>제목</th>
-							<th>내용</th>
-							<th>첨부파일</th>
-							<th>작성일</th>
-							<th>수정일</th>
-							<th>조회수</th>
-							<th>IP</th>
-							<th>작성자</th>
-							
+							<th>ID</th>
+							<th>PWD</th>
+							<th>이름</th>
+							<th>성별</th>
+							<th>생년월일</th>
+							<th>핸드폰번호</th>
+							<th>Email</th>
+							<th>인증여부</th>
+							<th>관리자여부</th>
+							<th>가입일</th>
+							<th>마지막접속일</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -54,15 +56,18 @@
 						
 						<c:forEach var="vo" items="${ list }" varStatus="i">
 							<tr>
-								<td>${ vo.free_index }</td>
-								<td>${ vo.free_title }</td>
-								<td>${ vo.free_content }</td>
-								<td>${ vo.free_org_f }</td>
-								<td>${ vo.free_date }</td>
-								<td>${ vo.free_mod_date }</td>
-								<td>${ vo.free_count }</td>
-								<td>${ vo.free_ip }</td>
+								<td>${ vo.u_index }</td>
 								<td>${ vo.u_id }</td>
+								<td>${ vo.u_pwd }</td>
+								<td>${ vo.u_name }</td>
+								<td>${ vo.u_gender }</td>
+								<td>${ vo.u_birth }</td>
+								<td>${ vo.u_phone }</td>
+								<td>${ vo.u_email }</td>
+								<td>${ vo.confirm_yn }</td>
+								<td>${ vo.admin_yn }</td>
+								<td>${ fn:substring(vo.joindate,0,10) }</td>
+								<td>${ vo.last_log }</td>
 							</tr>
 						</c:forEach>
 					</tbody>

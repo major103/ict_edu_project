@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +16,19 @@ public class ChattingController {
 		this.chatting_dao = chatting_dao;
 	}
 	
-	@RequestMapping("/chatting/list.do")
-	public String list(Model model) {
-		List<ChattingVo> list = chatting_dao.list();
+	@RequestMapping("/admin/chatting_insert_form.do")
+	public String adminCattingInsertForm(Model model) {
 		
-		model.addAttribute("list",list);
+		return "admin/chatting/chatting_insert_form";
+	}
+
+	
+	@RequestMapping("/admin/chatting_insert.do")
+	public String adminChattingInsert(ChattingVo vo) throws Exception {
 		
-		return "chatting_list";
+		chatting_dao.insert(vo);
+		
+		return "redirect:chatting_list.do";
 	}
 	
 	

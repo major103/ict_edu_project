@@ -31,7 +31,8 @@
 	</beans:bean>
 	
 	<beans:bean class="controller.CarController">
-		<beans:property name="car_dao" ref="car_dao"/>
+		<beans:constructor-arg ref="car_dao"/>
+		<beans:constructor-arg ref="company_dao"/>
 	</beans:bean>
 	
 	<beans:bean class="controller.ChattingController">

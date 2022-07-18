@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +16,20 @@ public class EstimateController {
 		this.estimate_dao = estimate_dao;
 	}
 	
-	@RequestMapping("/estimate/list.do")
-	public String list(Model model) {
-		List<EstimateVo> list = estimate_dao.list();
+	@RequestMapping("/admin/estimate_insert_form.do")
+	public String adminEstimateInsertForm(Model model) {
+	
+		return "admin/estimate/estimate_insert_form";
 		
-		model.addAttribute(list);
+	}
+	
+	
+	
+	@RequestMapping("/admin/estimate_insert.do")
+	public String adminEstimateInsert(EstimateVo vo) throws Exception {
 		
-		return "estimate_list";
+		estimate_dao.insert(vo);
+		
+		return "redirect:estimate_list.do";
 	}
 }

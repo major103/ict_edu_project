@@ -21,7 +21,8 @@
 <style type="text/css">
 
 	#btn1 {
-		text-align: right;
+		float: right;
+		margin-right: 30px;
 	}	
 
 </style>
@@ -53,7 +54,11 @@
 								<b>CAR</b>
 							</h2>
 						</div>
-
+			<div class="btn-group" id="btn1">
+				<button type="button" class="btn btn-dark" onclick="location.href='car_insert_form.do'">Insert</button>
+				<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
+				<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
+			</div>
 					</div>
 				</div>
 				<table class="table table-striped table-hover">
@@ -102,11 +107,7 @@
 				</table>
 			</div>
 		</div>
-			<div class="btn-group">
-				<button type="button" class="btn btn-dark" onclick="location.href='insert_form.do'">Insert</button>
-				<button type="button" class="btn btn-dark" onclick="modify();">Update</button>
-				<button type="button" class="btn btn-dark" onclick="del();">Delete</button>
-			</div>
+
 	</div>
 </body>
 </html>
