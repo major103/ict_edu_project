@@ -5,4 +5,35 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
+		<!-- admin service -->
+		<bean id="admin_service" class="service.AdminServiceImpl">
+			<constructor-arg ref="car_dao"/>
+			<constructor-arg ref="chatting_dao"/>
+			<constructor-arg ref="company_dao"/>
+			<constructor-arg ref="estimate_dao"/>
+			<constructor-arg ref="free_dao"/>
+			<constructor-arg ref="grade_dao"/>
+			<constructor-arg ref="news_dao"/>
+			<constructor-arg ref="recommend_dao"/>
+			<constructor-arg ref="reply_dao"/>
+			<constructor-arg ref="user_dao"/>
+			<constructor-arg ref="withdraw_dao"/>
+		</bean>
+		
+		<!-- member service -->
+		<bean id="member_service" class="service.MemberServiceImpl">
+			<constructor-arg ref="car_dao"/>
+			<constructor-arg ref="chatting_dao"/>
+			<constructor-arg ref="company_dao"/>
+			<constructor-arg ref="estimate_dao"/>
+			<constructor-arg ref="free_dao"/>
+			<constructor-arg ref="grade_dao"/>
+			<constructor-arg ref="news_dao"/>
+			<constructor-arg ref="recommend_dao"/>
+			<constructor-arg ref="reply_dao"/>
+			<constructor-arg ref="user_dao"/>
+			<constructor-arg ref="withdraw_dao"/>
+		</bean>
+		
+		
 </beans>

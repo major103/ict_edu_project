@@ -26,67 +26,20 @@
 	<!-- Autowired 설정 -->
 	<context:annotation-config/>
 	<!-- 수동생성 -->
-	<beans:bean class="controller.UserController">
-		<beans:property name="user_dao" ref="user_dao"/>
-	</beans:bean>
 	
-	<beans:bean class="controller.CarController">
-		<beans:constructor-arg ref="car_dao"/>
-		<beans:constructor-arg ref="company_dao"/>
-	</beans:bean>
 	
-	<beans:bean class="controller.ChattingController">
-		<beans:property name="chatting_dao" ref="chatting_dao"/>
+	<!-- Admin Service -->
+	<beans:bean class="controller.AdminController">
+		<beans:property name="admin_service" ref="admin_service"></beans:property>
 	</beans:bean>
-	
-	<beans:bean class="controller.CompanyController">
-		<beans:property name="company_dao" ref="company_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.EstimateController">
-		<beans:property name="estimate_dao" ref="estimate_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.FreeController">
-		<beans:property name="free_dao" ref="free_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.GradeController">
-		<beans:property name="grade_dao" ref="grade_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.NewsController">
-		<beans:property name="news_dao" ref="news_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.RecommendController">
-		<beans:property name="recommend_dao" ref="recommend_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.ReplyController">
-		<beans:property name="reply_dao" ref="reply_dao"/>
-	</beans:bean>
-	
-	<beans:bean class="controller.WithdrawController">
-		<beans:property name="withdraw_dao" ref="withdraw_dao"/>
+	<!-- Member Service -->
+	<beans:bean class="controller.MemberController">
+		<beans:property name="member_service" ref="member_service"></beans:property>
 	</beans:bean>
 	
 	<!-- CK Editor Controller -->
 	<beans:bean class="controller.CKEditorFileUploadController"/>
 	
 	
-	<!-- Admin Controller -->
-	<beans:bean class="controller.AdminController">
-		<beans:constructor-arg ref="car_dao"/>
-		<beans:constructor-arg ref="chatting_dao"/>
-		<beans:constructor-arg ref="company_dao"/>
-		<beans:constructor-arg ref="estimate_dao"/>
-		<beans:constructor-arg ref="free_dao"/>
-		<beans:constructor-arg ref="grade_dao"/>
-		<beans:constructor-arg ref="news_dao"/>
-		<beans:constructor-arg ref="recommend_dao"/>
-		<beans:constructor-arg ref="reply_dao"/>
-		<beans:constructor-arg ref="user_dao"/>
-		<beans:constructor-arg ref="withdraw_dao"/>
-	</beans:bean>
+	
 </beans:beans>

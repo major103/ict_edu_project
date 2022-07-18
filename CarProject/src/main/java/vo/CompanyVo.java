@@ -2,6 +2,7 @@ package vo;
 
 public class CompanyVo {
 
+	int	   co_index;
 	String co_name;
 	String co_loc;
 	String co_date;
@@ -9,10 +10,13 @@ public class CompanyVo {
 	String co_motto;
 	String co_business;
 	String co_intro;
-	String co_photo_s;
-	String co_photo_l;
-	
-	
+	String co_filename;
+	public int getCo_index() {
+		return co_index;
+	}
+	public void setCo_index(int co_index) {
+		this.co_index = co_index;
+	}
 	public String getCo_name() {
 		return co_name;
 	}
@@ -55,19 +59,12 @@ public class CompanyVo {
 	public void setCo_intro(String co_intro) {
 		this.co_intro = co_intro;
 	}
-	public String getCo_photo_s() {
-		return co_photo_s;
+	public String getCo_filename() {
+		return co_filename;
 	}
-	public void setCo_photo_s(String co_photo_s) {
-		this.co_photo_s = co_photo_s;
-	}
-	public String getCo_photo_l() {
-		return co_photo_l;
-	}
-	public void setCo_photo_l(String co_photo_l) {
-		this.co_photo_l = co_photo_l;
+	public void setCo_filename(String co_filename) {
+		this.co_filename = co_filename;
 	}
 	
-	
-	
+		
 }
