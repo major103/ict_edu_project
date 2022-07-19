@@ -2,7 +2,7 @@
 
 --댓글
 
-
+select * from reply
 --일련번호
 create sequence seq_re_index
 
@@ -12,7 +12,8 @@ create table reply(
 	re_index	int,
 	re_date		date,					--댓글 작성일
 	re_content	varchar2(255),	
-	free_index	int,					--댓글 내용
+	free_index	int,		
+	re_ip		varchar2(100),			--댓글 내용
 	u_id		varchar2(100)			--fk	  게시글 번호
 	
 )
@@ -35,8 +36,9 @@ alter table reply
 	add constraint fk_reply_u_id foreign key(u_id)
 	references user_info(u_id)
  
+
+ drop table reply
  
- --ip 추가
- alter table reply add re_ip varchar2(100)
+ 
  
  */

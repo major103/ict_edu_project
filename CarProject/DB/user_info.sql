@@ -11,12 +11,11 @@
  	u_index		int,						
  	u_id		varchar2(100)		not null,
  	u_pwd		varchar2(100)		not null,
- 	
+ 	u_name		varchar2(100)		not null,
  	u_gender	varchar2(100)		not null,
  	u_birth		varchar2(100)		not null,
  	u_phone		varchar2(100)		not null,
  	u_email 	varchar2(100)		not null,
- 	u_ip		varchar2(100)		not null,
  	confirm_yn	varchar2(100)		default 'n',
  	joindate	date,
  	admin_yn	varchar2(100) 		default 'n',
@@ -24,16 +23,7 @@
  	
  	)
  	
---u_ip 삭제
-alter table user_info drop column u_ip
-select * from user_info
 
- 	alter table user_info add u_name varchar2(100)
- 	u_name		varchar2(100)		not null,
- 	
- 	alter table user_info
- 		rename column u_idx to u_index
- 	
  	--기본키
  	alter table user_info
  		add constraint pk_user_u_index primary key(u_index);
@@ -51,12 +41,12 @@ select * from user_info
  		values(seq_user_u_idx.nextVal,
  				'admin',
  				'1234',
+ 				'이은구',
  				'남',
  				'1994/07/29',
  				'010-4057-2432',
  				'dusgod30@gmail.com',
- 				'192.168.0.1',
- 				'n',
+ 				'y',
  				sysdate,
  				'y',
  				sysdate);
@@ -65,14 +55,14 @@ select * from user_info
  		values(seq_user_u_idx.nextVal,
  				'guest',
  				'1234',
+ 				'최지영',
  				'여',
  				'1996/09/12',
  				'010-2162-6666',
  				'asdf123@gmail.com',
- 				'192.168.0.1',
- 				'n',
+ 				'y',
  				sysdate,
- 				'n',
+ 				default,
  				sysdate);
  				
  				

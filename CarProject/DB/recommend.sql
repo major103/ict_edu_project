@@ -3,8 +3,12 @@
 --모델추천
 
 select * from recommend
+
+create sequence seq_rec_index
+
 create table recommend(
 	
+	rec_index		int,
 	car_name		varchar2(100), --fk	차량 이름
 	gender		varchar2(100),	  --성별
 	age			int,			  --나이
@@ -14,7 +18,7 @@ create table recommend(
  	
  	
  	
- 	
+ --pk	
  alter table recommend 
  	add constraint pk_recommend_car_name primary key(car_name)
  	
@@ -29,6 +33,6 @@ alter table recommend
 	references user_info(u_id);
  
  
- 
+ drop table recommend
  
  */

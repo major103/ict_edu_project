@@ -1,14 +1,15 @@
 /*
 --자동차 정보
 
-select * from car_info
-
-drop table car
+select * from car
 
 
+
+create sequence seq_car_index
 --테이블
 
 create table car(
+	car_index		int,
 	car_name 		varchar2(255)	not null,	--차량이름
 	car_size		varchar2(255),				--차량크기
 	co_name			varchar2(255),				--차량브랜드(브랜드, co_name) fk
@@ -28,12 +29,14 @@ create table car(
 
 --pk
 alter table car
-	add constraint pk_car_name primary key(car_name);
-	
+	add constraint pk_car_index primary key(car_index);
+
+
 --차종 unique
 alter table car
 	add constraint unique_car_name unique(car_name);
 	
+
 --fk
 alter table car
 	add constraint fk_co_name foreign key(co_name)
@@ -42,7 +45,8 @@ alter table car
 	  
 --sample data
 insert into car
-	values( '911-Carrera',
+	values( 1,
+			'911-Carrera',
 			'coupe',
 			'porsche',
 			'158,700,000',
@@ -61,7 +65,7 @@ insert into car
 			
 			
  
- 
+ drop table car
  
  
  

@@ -1,13 +1,11 @@
 /*
 
-select * from user_info
-
 --뉴스
 
 select * from news
 
 --일련번호 관리객체	
-create sequence seq_news_n_index
+create sequence seq_news_index
 	
 --table
 create table news(
@@ -41,6 +39,6 @@ alter table news
 select * from news
  
  
- 
+ drop table news
  
  */

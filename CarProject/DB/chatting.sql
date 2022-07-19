@@ -16,6 +16,7 @@ create table chatting(
 	c_content		varchar2(1000),		--내용
 	c_file			varchar2(100),
 	c_date			date,				--작성일
+	c_ip			varchar2(100),
 	u_id			varchar2(100)--fk	--작성자
 )
 
@@ -31,15 +32,16 @@ alter table chatting
  	
  	insert into chatting
  		values(seq_discuss_d_idx.nextVal,
- 				'열받게하지마세요',
- 				'당연히 있어야 하지 않을까요?',
+ 				'제목입니다',
+ 				'내용은 조금 길 수도 있으니 1000바이트 입니다',
  				null,
  				sysdate,
+ 				'192.168.0.9',
  				'admin')
  
 select * from chatting
  
- --ip 컬럼 추가
- alter table chatting add c_ip varchar2(100)
  
+ 
+ drop table chatting
  */

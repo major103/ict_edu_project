@@ -2,6 +2,9 @@
 
 --회사 정보
 select * from company order by co_name asc
+
+create sequence seq_company_co_index
+
 create table company(
 	
 	co_index		int,			
@@ -17,15 +20,31 @@ create table company(
 
 )
 
-drop table company
 
 --pk
 alter table company
 	add constraint pk_company_index primary key(co_index);
 
+select * from car
+
+--sample data
+	insert into company values(
+		seq_company_co_index.nextVal,
+		'porsche',
+		'italy',
+		null,
+		null,
+		null,
+		null,
+		'스포츠카는 포르쉐',
+		null
+	
+	
+	)
 
  
  
+drop table company
  
  
  

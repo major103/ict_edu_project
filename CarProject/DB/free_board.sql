@@ -5,7 +5,7 @@ select * from free
 --자유게시판
 
 --일련번호 관리객체
-	create sequence seq_free_free_index
+	create sequence seq_free_index
 	
 create table free(
 
@@ -40,12 +40,11 @@ alter table free
  			sysdate,
  			sysdate,
  			2325,
+ 			'192.168.0.2',
  			'admin')
  
 
---ip 추가
-alter table free add free_ip varchar2(100)
  
  
- 
+ drop table free
  */
