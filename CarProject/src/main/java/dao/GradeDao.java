@@ -6,12 +6,10 @@ import vo.GradeVo;
 
 public interface GradeDao {
 
-	List<GradeVo> list();
-
-	int insert(GradeVo vo) throws Exception;
+	List<GradeVo>	selectList();
+	GradeVo			selectOne(int g_idx);
 	
-	int update(GradeVo vo) throws Exception;
-	
-	int delete(int idx) throws Exception;
-	
+	int 			insert(GradeVo vo);
+	int				delete(int g_idx);
+	int				update(GradeVo vo);
 }

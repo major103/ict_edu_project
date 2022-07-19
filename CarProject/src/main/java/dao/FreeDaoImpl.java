@@ -3,40 +3,43 @@ package dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import vo.FreeVo;
 
-public class FreeDaoImpl implements FreeDao{
+public class FreeDaoImpl implements FreeDao {
 
+	@Autowired
 	SqlSession sqlSession;
-
-	public void setSqlSession(SqlSession sqlSession) {
-		this.sqlSession = sqlSession;
-	}
-
+	
 	@Override
-	public List<FreeVo> list() {
+	public List<FreeVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("free.free_list");
 	}
 
 	@Override
-	public int insert(FreeVo vo) throws Exception {
+	public FreeVo selectOne(int free_idx) {
 		// TODO Auto-generated method stub
-		return sqlSession.insert("free.free_insert");
+		return sqlSession.selectOne("free.free_one", free_idx);
 	}
 
 	@Override
-	public int update(FreeVo vo) throws Exception {
+	public int insert(FreeVo vo) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.insert("free.free_insert", vo);
 	}
 
 	@Override
-	public int delete(int idx) throws Exception {
+	public int delete(int free_idx) {
 		// TODO Auto-generated method stub
-		return 0;
+		return sqlSession.delete("free.free_delete", free_idx);
 	}
-	
+
+	@Override
+	public int update(FreeVo vo) {
+		// TODO Auto-generated method stub
+		return sqlSession.update("free.free_update", vo);
+	}
 
 }
