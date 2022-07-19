@@ -7,9 +7,8 @@ public class ChattingVo {
 	String  c_content;
 	String	c_file;
 	String 	c_date;
+	String  c_ip;
 	String	u_id;
-	//ip 추가
-	String c_ip;
 	
 	
 	

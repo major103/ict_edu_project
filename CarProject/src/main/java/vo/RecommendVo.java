@@ -2,12 +2,19 @@ package vo;
 
 public class RecommendVo {
 
+	int	   rec_index;
 	String car_name;
 	String gender;
 	int	   age;
 	String u_id;
 	
 	
+	public int getRec_index() {
+		return rec_index;
+	}
+	public void setRec_index(int rec_index) {
+		this.rec_index = rec_index;
+	}
 	public String getCar_name() {
 		return car_name;
 	}

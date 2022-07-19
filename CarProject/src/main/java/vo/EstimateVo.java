@@ -2,10 +2,17 @@ package vo;
 
 public class EstimateVo {
 
+	int    e_index;
 	String car_name;
 	String e_option;
 	int	   e_price;
 	
+	public int getE_index() {
+		return e_index;
+	}
+	public void setE_index(int e_index) {
+		this.e_index = e_index;
+	}
 	public String getCar_name() {
 		return car_name;
 	}

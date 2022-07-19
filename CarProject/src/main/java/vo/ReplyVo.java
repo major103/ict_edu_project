@@ -6,10 +6,9 @@ public class ReplyVo {
 	String	re_date;
 	String 	re_content;
 	int		free_index;
+	String  re_ip;
 	String	u_id;
 	
-	//ip 추가
-	String re_ip;
 	
 	public String getRe_ip() {
 		return re_ip;

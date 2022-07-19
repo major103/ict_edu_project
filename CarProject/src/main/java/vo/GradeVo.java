@@ -4,20 +4,12 @@ public class GradeVo {
 
 	int		g_index;
 	int		g_count;
-	int		g_good;
 	String	g_content;
 	String	g_point;
+	String  g_ip;
 	String	u_id;
 	
-	//ip 추가
-	String g_ip;
 	
-	public String getG_ip() {
-		return g_ip;
-	}
-	public void setG_ip(String g_ip) {
-		this.g_ip = g_ip;
-	}
 	public int getG_index() {
 		return g_index;
 	}
@@ -29,12 +21,6 @@ public class GradeVo {
 	}
 	public void setG_count(int g_count) {
 		this.g_count = g_count;
-	}
-	public int getG_good() {
-		return g_good;
-	}
-	public void setG_good(int g_good) {
-		this.g_good = g_good;
 	}
 	public String getG_content() {
 		return g_content;
@@ -48,6 +34,12 @@ public class GradeVo {
 	public void setG_point(String g_point) {
 		this.g_point = g_point;
 	}
+	public String getG_ip() {
+		return g_ip;
+	}
+	public void setG_ip(String g_ip) {
+		this.g_ip = g_ip;
+	}
 	public String getU_id() {
 		return u_id;
 	}
@@ -55,6 +47,7 @@ public class GradeVo {
 		this.u_id = u_id;
 	}
 	
+	\
 	
 	
 }

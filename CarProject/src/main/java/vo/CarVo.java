@@ -2,6 +2,7 @@ package vo;
 
 public class CarVo {
 	
+	int	   car_index;
 	String car_name;
 	String car_size;
 	String co_name;
@@ -20,6 +21,12 @@ public class CarVo {
 	
 	public String getCar_name() {
 		return car_name;
+	}
+	public int getCar_index() {
+		return car_index;
+	}
+	public void setCar_index(int car_index) {
+		this.car_index = car_index;
 	}
 	public void setCar_name(String car_name) {
 		this.car_name = car_name;

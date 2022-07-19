@@ -11,8 +11,8 @@ public class UserVo {
 	String u_phone;
 	String u_email;
 	String confirm_yn;
-	String admin_yn;
 	String joindate;
+	String admin_yn;
 	String last_log;
 	
 	public int getU_index() {
