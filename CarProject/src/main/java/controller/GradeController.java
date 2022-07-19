@@ -38,4 +38,21 @@ public class GradeController {
 		return "";
 	}
 	
+	@RequestMapping("delete.do")
+	public String delete(int g_idx) {
+		
+		return "";
+	}
+	
+	@RequestMapping("modify_form.do")
+	public String modify_form(int g_idx) {
+		
+		return "";
+	}
+	
+	@RequestMapping("modify_do")
+	public String modify(GradeVo vo) {
+		
+		return "";
+	}
 }

@@ -38,5 +38,22 @@ public class FreeController {
 		return "";
 	}
 	
+	@RequestMapping("delete.do")
+	public String delete(int free_idx) {
+		
+		return "";
+	}
+	
+	@RequestMapping("modify_form.do")
+	public String modify_form(int free_idx) {
+		
+		return "";
+	}
+	
+	@RequestMapping("modify.do")
+	public String modify(FreeVo vo) {
+		
+		return "";
+	}
 	
 }
