@@ -2,9 +2,17 @@ package dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
 import vo.GradeVo;
 
 public class GradeDaoImpl implements GradeDao {
+
+	SqlSession sqlSession;
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 
 	@Override
 	public List<GradeVo> selectList() {
