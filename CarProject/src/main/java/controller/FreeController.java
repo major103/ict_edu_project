@@ -1,6 +1,5 @@
 package controller;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -12,33 +11,49 @@ import dao.FreeDao;
 import vo.FreeVo;
 
 @Controller
+@RequestMapping("/free/")
 public class FreeController {
 
+	@Autowired
+	HttpServletRequest request;
+	
+	@Autowired
+	HttpSession session;
+	
 	FreeDao free_dao;
+
 	public void setFree_dao(FreeDao free_dao) {
 		this.free_dao = free_dao;
 	}
 	
-	@Autowired
-	HttpServletRequest request;
-	@Autowired
-	ServletContext application;
-	@Autowired
-	HttpSession session;
+	@RequestMapping("insert_form.do")
+	public String insert_form() {
 		
-	@RequestMapping("/admin/free_insert_form.do")
-	public String adminFreeInsertForm() {
-		
-		return "admin/free/free_insert_form";
+		return "free/free_insert_form";
 	}
-
 	
-	@RequestMapping("/admin/free_insert.do")
-	public String adminFreeInsert(FreeVo vo) throws Exception {
+	@RequestMapping("insert.do")
+	public String insert(FreeVo vo) {
 		
-		free_dao.insert(vo);
-		
-		return "redirect:free_list.do";
+		return "";
 	}
+	
+	@RequestMapping("delete.do")
+	public String delete(int free_idx) {
 		
+		return "";
+	}
+	
+	@RequestMapping("modify_form.do")
+	public String modify_form(int free_idx) {
+		
+		return "";
+	}
+	
+	@RequestMapping("modify.do")
+	public String modify(FreeVo vo) {
+		
+		return "";
+	}
+	
 }

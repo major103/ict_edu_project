@@ -8,10 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import vo.FreeVo;
 
 public class FreeDaoImpl implements FreeDao {
-
-	@Autowired
+	
 	SqlSession sqlSession;
 	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+
 	@Override
 	public List<FreeVo> selectList() {
 		// TODO Auto-generated method stub
