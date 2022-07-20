@@ -15,7 +15,7 @@ public class ChattingDaoImpl implements ChattingDao{
 	}
 
 	@Override
-	public List<ChattingVo> list() {
+	public List<ChattingVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("chatting.chatting_list");
 	}

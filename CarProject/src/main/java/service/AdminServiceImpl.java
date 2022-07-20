@@ -66,7 +66,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public Map car_List() {
 		// TODO Auto-generated method stub
-		List<CarVo> car_list = car_dao.list();
+		List<CarVo> car_list = car_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("car_list", car_list);
@@ -81,7 +81,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public Map chatting_List() {
 		// TODO Auto-generated method stub
-		List<ChattingVo> chatting_list = chatting_dao.list();
+		List<ChattingVo> chatting_list = chatting_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("chatting_list", chatting_list);
@@ -95,7 +95,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public Map company_List() {
 		// TODO Auto-generated method stub
-		List<CompanyVo> company_list = company_dao.list();
+		List<CompanyVo> company_list = company_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("company_list", company_list);
@@ -110,7 +110,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public Map estimate_List() {
 		// TODO Auto-generated method stub
-		List<EstimateVo> estimate_list = estimate_dao.list();
+		List<EstimateVo> estimate_list = estimate_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("estimate_list", estimate_list);
@@ -124,7 +124,7 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public Map free_List() {
 		// TODO Auto-generated method stub
-		List<FreeVo> free_list = free_dao.list();
+		List<FreeVo> free_list = free_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("free_list", free_list);
@@ -140,7 +140,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map grade_List() {
 		// TODO Auto-generated method stub
 		
-		List<GradeVo> grade_list = grade_dao.list();
+		List<GradeVo> grade_list = grade_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("grade_list", grade_list);
@@ -155,7 +155,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map news_List() {
 		// TODO Auto-generated method stub
 		
-		List<NewsVo> news_list = news_dao.list();
+		List<NewsVo> news_list = news_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("news_list", news_list);
@@ -170,7 +170,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map recommend_List() {
 		// TODO Auto-generated method stub
 
-		List<RecommendVo> recommend_list = recommend_dao.list();
+		List<RecommendVo> recommend_list = recommend_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("recommend_list", recommend_list);
@@ -185,7 +185,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map reply_List() {
 		// TODO Auto-generated method stub
 		
-		List<ReplyVo> reply_list = reply_dao.list();
+		List<ReplyVo> reply_list = reply_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("reply_list", reply_list);
@@ -200,7 +200,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map user_List() {
 		// TODO Auto-generated method stub
 
-		List<UserVo> user_list = user_dao.list();
+		List<UserVo> user_list = user_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("user_list", user_list);
@@ -215,7 +215,7 @@ public class AdminServiceImpl implements AdminService{
 	public Map withdraw_List() {
 		// TODO Auto-generated method stub
 
-		List<WithdrawVo> withdraw_list = withdraw_dao.list();
+		List<WithdrawVo> withdraw_list = withdraw_dao.selectList();
 		
 		Map map = new HashMap();
 		map.put("withdraw_list", withdraw_list);

@@ -15,7 +15,7 @@ public class CarDaoImpl implements CarDao{
 	}
 
 	@Override
-	public List<CarVo> list() {
+	public List<CarVo> selectList() {
 		// TODO Auto-generated method stub
 		return null;
 	}

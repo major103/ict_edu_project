@@ -6,7 +6,7 @@ import vo.WithdrawVo;
 
 public interface WithdrawDao {
 
-	List<WithdrawVo> list();
+	List<WithdrawVo> selectList();
 
 	int insert(WithdrawVo vo) throws Exception;
 	

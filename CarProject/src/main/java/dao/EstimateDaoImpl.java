@@ -16,7 +16,7 @@ public class EstimateDaoImpl implements EstimateDao {
 	}
 
 	@Override
-	public List<EstimateVo> list() {
+	public List<EstimateVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("estimate.estimate_list");
 	}

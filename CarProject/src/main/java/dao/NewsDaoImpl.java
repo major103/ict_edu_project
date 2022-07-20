@@ -15,7 +15,7 @@ public class NewsDaoImpl implements NewsDao {
 	}
 
 	@Override
-	public List<NewsVo> list() {
+	public List<NewsVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("news.news_list");
 	}

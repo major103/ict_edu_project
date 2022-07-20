@@ -6,7 +6,7 @@ import vo.RecommendVo;
 
 public interface RecommendDao {
 
-	List<RecommendVo> list();
+	List<RecommendVo> selectList();
 
 	int insert(RecommendVo vo) throws Exception;
 	

@@ -7,7 +7,7 @@ import vo.CarVo;
 public interface CarDao {
 
 	
-	List<CarVo> list();
+	List<CarVo> selectList();
 
 	int insert(CarVo vo) throws Exception;
 	

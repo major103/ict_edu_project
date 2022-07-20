@@ -6,7 +6,7 @@ import vo.UserVo;
 
 public interface UserDao {
 
-	List<UserVo> list();
+	List<UserVo> selectList();
 
 	int insert(UserVo vo) throws Exception;
 	

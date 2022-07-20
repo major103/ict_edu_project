@@ -6,7 +6,7 @@ import vo.EstimateVo;
 
 public interface EstimateDao {
 
-	List<EstimateVo> list();
+	List<EstimateVo> selectList();
 
 	int insert(EstimateVo vo) throws Exception;
 	

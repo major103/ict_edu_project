@@ -6,7 +6,7 @@ import vo.CompanyVo;
 
 public interface CompanyDao {
 
-	List<CompanyVo> list();
+	List<CompanyVo> selectList();
 
 	int insert(CompanyVo vo) throws Exception;
 	

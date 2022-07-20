@@ -6,7 +6,7 @@ import vo.ChattingVo;
 
 public interface ChattingDao {
 
-	List<ChattingVo> list();
+	List<ChattingVo> selectList();
 
 	int insert(ChattingVo vo) throws Exception;
 	

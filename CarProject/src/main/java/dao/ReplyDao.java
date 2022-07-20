@@ -6,7 +6,7 @@ import vo.ReplyVo;
 
 public interface ReplyDao {
 
-	List<ReplyVo> list();
+	List<ReplyVo> selectList();
 
 	int insert(ReplyVo vo) throws Exception;
 	

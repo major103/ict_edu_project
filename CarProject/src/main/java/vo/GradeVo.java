@@ -47,7 +47,7 @@ public class GradeVo {
 		this.u_id = u_id;
 	}
 	
-	\
+	
 	
 	
 }

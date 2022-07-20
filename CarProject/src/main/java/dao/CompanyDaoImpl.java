@@ -15,7 +15,7 @@ public class CompanyDaoImpl implements CompanyDao{
 	}
 
 	@Override
-	public List<CompanyVo> list() {
+	public List<CompanyVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("company.company_list");
 	}

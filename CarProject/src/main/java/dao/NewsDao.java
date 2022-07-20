@@ -6,7 +6,7 @@ import vo.NewsVo;
 
 public interface NewsDao {
 
-	List<NewsVo> list();
+	List<NewsVo> selectList();
 
 	int insert(NewsVo vo) throws Exception;
 	

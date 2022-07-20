@@ -15,7 +15,7 @@ public class ReplyDaoImpl implements ReplyDao{
 	}
 
 	@Override
-	public List<ReplyVo> list() {
+	public List<ReplyVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("reply.reply_list");
 	}

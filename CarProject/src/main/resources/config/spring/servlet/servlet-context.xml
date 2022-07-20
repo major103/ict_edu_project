@@ -32,10 +32,18 @@
 	<beans:bean class="controller.AdminController">
 		<beans:property name="admin_service" ref="admin_service"></beans:property>
 	</beans:bean>
-	<!-- Member Service -->
-	<beans:bean class="controller.MemberController">
-		<beans:property name="member_service" ref="member_service"></beans:property>
+	
+	
+	<!-- Free Controller -->
+	<beans:bean class="controller.FreeController">
+		<beans:property name="free_dao" ref="free_dao"></beans:property>
 	</beans:bean>
+	
+	<!-- Grade Controller -->
+	<beans:bean class="controller.GradeController">
+		<beans:property name="grade_dao" ref="grade_dao"></beans:property>
+	</beans:bean>
+	
 	
 	<!-- CK Editor Controller -->
 	<beans:bean class="controller.CKEditorFileUploadController"/>

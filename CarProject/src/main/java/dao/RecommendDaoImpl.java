@@ -16,7 +16,7 @@ public class RecommendDaoImpl implements RecommendDao {
 	}
 
 	@Override
-	public List<RecommendVo> list() {
+	public List<RecommendVo> selectList() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("recommend.recommend_list");
 	}
