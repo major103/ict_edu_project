@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="car">
+
+<!-- 전체 유저조회 -->
+<select id="car_list" resultType="vo.CarVo">
+	select * from car
+</select>
+
+<!-- insert -->
+<insert id="car_insert" parameterType="vo.CarVo">
+	insert into car
+	values( #{ car_name },
+			#{ car_size },
+			#{ co_name },
+			#{ car_price },
+			#{ car_fuel },
+			#{ car_type },
+			#{ car_fcost },
+			#{ car_output },
+			#{ car_torq },
+			#{ car_exhaust },
+			#{ car_engine },
+			#{ car_drive },
+			#{ car_change },
+			#{ car_photo }
+			)
+</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
