@@ -7,7 +7,7 @@
 <%@ page import="org.jsoup.nodes.Element" %>
 <%@ page import="org.jsoup.select.Elements" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+ 
 <%
 	//자동차뉴스 항목용 document
     Document doc = Jsoup.connect("https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid1=103&sid2=239").get();
