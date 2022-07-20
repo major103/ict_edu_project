@@ -22,9 +22,9 @@ public class FreeDaoImpl implements FreeDao {
 	}
 
 	@Override
-	public FreeVo selectOne(int free_idx) {
+	public FreeVo selectOne(int free_index) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("free.free_one", free_idx);
+		return sqlSession.selectOne("free.free_one", free_index);
 	}
 
 	@Override
@@ -34,9 +34,9 @@ public class FreeDaoImpl implements FreeDao {
 	}
 
 	@Override
-	public int delete(int free_idx) {
+	public int delete(int free_index) {
 		// TODO Auto-generated method stub
-		return sqlSession.delete("free.free_delete", free_idx);
+		return sqlSession.delete("free.free_delete", free_index);
 	}
 
 	@Override

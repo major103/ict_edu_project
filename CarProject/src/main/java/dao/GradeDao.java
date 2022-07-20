@@ -7,9 +7,9 @@ import vo.GradeVo;
 public interface GradeDao {
 
 	List<GradeVo>	selectList();
-	GradeVo			selectOne(int g_idx);
+	GradeVo			selectOne(int g_index);
 	
 	int 			insert(GradeVo vo);
-	int				delete(int g_idx);
+	int				delete(int g_index);
 	int				update(GradeVo vo);
 }

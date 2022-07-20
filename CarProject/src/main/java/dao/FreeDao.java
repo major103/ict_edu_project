@@ -8,9 +8,9 @@ import vo.FreeVo;
 public interface FreeDao {
 	
 	List<FreeVo>	selectList();
-	FreeVo			selectOne(int free_idx);
+	FreeVo			selectOne(int free_index);
 	
 	int				insert(FreeVo vo);
-	int				delete(int free_idx);
+	int				delete(int free_index);
 	int				update(FreeVo vo);
 }

@@ -21,9 +21,9 @@ public class GradeDaoImpl implements GradeDao {
 	}
 
 	@Override
-	public GradeVo selectOne(int g_idx) {
+	public GradeVo selectOne(int g_index) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("grade.grade_one", g_idx);
+		return sqlSession.selectOne("grade.grade_one", g_index);
 	}
 
 	@Override
@@ -33,9 +33,9 @@ public class GradeDaoImpl implements GradeDao {
 	}
 
 	@Override
-	public int delete(int g_idx) {
+	public int delete(int g_index) {
 		// TODO Auto-generated method stub
-		return sqlSession.delete("grade.grade_delete", g_idx);
+		return sqlSession.delete("grade.grade_delete", g_index);
 	}
 
 	@Override
