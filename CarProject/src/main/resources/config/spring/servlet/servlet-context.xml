@@ -25,6 +25,8 @@
 	
 	<!-- Autowired 설정 -->
 	<context:annotation-config/>
+	<context:component-scan base-package="com.ict.myapp" />
+	<context:component-scan base-package="controller" />
 	<!-- 수동생성 -->
 	
 	
