@@ -16,7 +16,7 @@
 
 <div>
 	<table>
-		<div><input type="button" value="새로 만들기"></div>
+		<div><input type="button" value="새로 만들기" onclick="location.href='chatting_insert_form.jsp';"></div>
 		<tr>
 			<th>방번호</th>
 			<th>방제목</th>

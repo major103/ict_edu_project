@@ -13,4 +13,6 @@ public interface FreeDao {
 	int				insert(FreeVo vo);
 	int				delete(int free_index);
 	int				update(FreeVo vo);
+	
+	int				update_count(int free_index);
 }

@@ -26,6 +26,18 @@ public class FreeController {
 		this.free_dao = free_dao;
 	}
 	
+	@RequestMapping("list.do")
+	public String list() {
+		
+		return "free/free_list";
+	}
+	
+	@RequestMapping("view.do")
+	public String view() {
+		
+		return "free/free_view";
+	}
+	
 	@RequestMapping("insert_form.do")
 	public String insert_form() {
 		
@@ -55,7 +67,7 @@ public class FreeController {
 	@RequestMapping("modify.do")
 	public String modify(FreeVo vo) {
 		
-		return "";
+		return "redirect:view.do";
 	}
 	
 }

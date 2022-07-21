@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import vo.FreeVo;
 
@@ -42,6 +43,12 @@ public class FreeDaoImpl implements FreeDao {
 	public int update(FreeVo vo) {
 		// TODO Auto-generated method stub
 		return sqlSession.update("free.free_update", vo);
+	}
+
+	@Override
+	public int update_count(int free_index) {
+		// TODO Auto-generated method stub
+		return sqlSession.update("free.free_update_count", free_index);
 	}
 
 }

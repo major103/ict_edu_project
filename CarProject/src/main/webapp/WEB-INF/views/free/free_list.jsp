@@ -28,9 +28,7 @@
 	<!-- 글이 없는 경우 -->
 	<c:if test="${ empty list }">
 		<tr>
-			<td colspan="6" align="center">
-			<font color="red">등록된 글이 없습니다</font>
-			</td>
+			<td colspan="6" align="center">등록된 글이 없습니다</td>
 		</tr>
 	</c:if>
 	
