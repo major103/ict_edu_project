@@ -69,5 +69,5 @@ public interface AdminService {
 	int withdraw_delete(WithdrawVo vo);
 	
 		//selectOne
-	CarVo car_selectOne(String car_name);
+	CarVo car_selectOne(int car_index);
 }

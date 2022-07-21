@@ -455,10 +455,13 @@ public class AdminServiceImpl implements AdminService{
 
 
 	@Override
-	public CarVo car_selectOne(String car_name) {
+	public CarVo car_selectOne(int car_index) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	
 
 
 

@@ -156,9 +156,9 @@ public class AdminController {
 	
 	
 	@RequestMapping("car_modify_form.do")
-	public String carModifyForm(String car_name,Model model) {
+	public String carModifyForm(int car_index,Model model) {
 		
-		CarVo vo = admin_service.car_selectOne(car_name);
+		CarVo vo = admin_service.car_selectOne(car_index);
 		
 		model.addAttribute("vo",vo);
 		

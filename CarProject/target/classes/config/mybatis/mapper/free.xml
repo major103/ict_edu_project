@@ -9,16 +9,39 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select * from free order by free_index desc
 </select>
 
+
+
+<!-- 글 쓰기 -->
+<insert id="free_insert" parameterType="vo.FreeVo">
+	insert into free values(
+		seq_free_index.nextVal,
+		#{ free_title },
+		#{ free_content },
+		#{ free_file },
+		sysdate,
+		#{ free_count },
+		default,
+		#{ free_ip },
+		#{ u_id }
+	)
+</insert>
+
+<!-- 조회수 -->
+<update id="free_count" parameterType="up">
+	update free
+		   set free_count = free_count + 1
+	where free_index=#{ free_index }
+</update>
+
+<!-- 수정 -->
+<update id="free_update" parameterType="vo.FreeVo">
+	update free set free_title	 = #{ free_title },
+					free_content = #{ free_content },
+					free_ip		 = #{ free_ip },
+					free_regdate = sysdate
+	where free_index = #{ free_index }
+</update>
+
 </mapper>
-
-
-
-
-
-
-
-
-
-
 
 
